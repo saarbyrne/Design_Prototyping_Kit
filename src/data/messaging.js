@@ -1,4 +1,5 @@
 // Mock data for messaging – no backend
+// All messaging mock data lives in src/data (see PROJECT_STANDARDS)
 
 export const currentUserId = 'current-user'
 

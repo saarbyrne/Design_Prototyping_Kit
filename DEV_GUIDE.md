@@ -2,6 +2,8 @@
 
 Simple steps to get the repo on your machine, run it, and save your work.
 
+**Project structure and standards** (where data, components, and design rules live) are in **`PROJECT_STANDARDS.md`**. Use that for data vs components vs design conventions.
+
 ---
 
 ## 1. Clone the repo

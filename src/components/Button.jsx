@@ -2,21 +2,16 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import '../styles/design-tokens.css'
 
-/**
- * Medinah Design System Button Component
- * 
- * Always uses filled variant, small size, and sentence case text
- * Adheres to Medinah brand guidelines automatically
- */
-function MedinahButton({ 
-  children, 
-  variant = 'primary', 
-  size = 'small', 
-  disabled = false, 
-  onClick, 
+function MedinahButton({
+  children,
+  variant = 'primary',
+  size = 'small',
+  disabled = false,
+  onClick,
   type = 'button',
   className = '',
-  ...props 
+  style: styleOverride,
+  ...props
 }) {
   const padding = size === 'small'
     ? 'var(--spacing-sm) var(--spacing-md)'
@@ -41,13 +36,18 @@ function MedinahButton({
     opacity: disabled ? 0.6 : 1,
   }
 
+  const mergedStyle = {
+    ...computedStyle,
+    ...(styleOverride || {}),
+  }
+
   return (
     <button
       type={type}
       className={className}
       disabled={disabled}
       onClick={onClick}
-      style={computedStyle}
+      style={mergedStyle}
       {...props}
     >
       {children}

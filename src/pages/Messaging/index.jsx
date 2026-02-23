@@ -44,7 +44,7 @@ import {
   getAllConversations,
   getMessagesForConversation,
   getUserById
-} from './mockData'
+} from '../../data/messaging'
 import '../../styles/design-tokens.css'
 
 const SIDEBAR_WIDTH = 280

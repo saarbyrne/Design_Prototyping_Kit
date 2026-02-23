@@ -147,6 +147,20 @@
   --color-performance-average: #ffc107;
   --color-performance-poor: #dc3545;
   
+  /* Calendar / Screenshot-aligned palette */
+  --color-calendar-accent: #007AFF;
+  --color-calendar-accent-hover: #0056b3;
+  --color-sidebar-bg: #2C2C2E;
+  --color-sidebar-active-bg: #007AFF;
+  --color-calendar-event-blue: #007AFF;
+  --color-calendar-event-red: #FF3B30;
+  --color-calendar-event-purple: #5856D6;
+  --color-calendar-day-number: #333333;
+  --color-calendar-day-number-other: #999999;
+  --color-calendar-header-text: #333333;
+  --color-calendar-border: #E0E0E0;
+  --color-button-secondary-border: #E0E0E0;
+  
   /* Button Styles - Medinah Guidelines */
   --button-font-size: var(--font-size-sm);
   --button-font-weight: var(--font-weight-medium);

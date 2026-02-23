@@ -254,7 +254,8 @@ const CalendarPage = () => {
         display: 'flex',
         flexDirection: 'column',
         height: '100%',
-        backgroundColor: '#ffffff',
+        minWidth: 0,
+        backgroundColor: 'var(--color-background-primary)',
         position: 'relative',
       }}
     >
@@ -272,7 +273,7 @@ const CalendarPage = () => {
         activeFilterCount={getTotalActiveFilterCount()}
       />
 
-      <Box sx={{ display: 'flex', flex: 1, minHeight: 0 }}>
+        <Box sx={{ display: 'flex', flex: 1, minHeight: 0 }}>
         {showFilters && (
           <Box sx={{ width: '340px', flexShrink: 0 }}>
             <FiltersSidebar
@@ -284,8 +285,8 @@ const CalendarPage = () => {
           </Box>
         )}
 
-        <Box sx={{ flex: 1, minHeight: 0, overflow: 'hidden' }}>
-          <Box sx={{ width: '100%', height: '100%', minHeight: '600px' }}>
+        <Box sx={{ flex: 1, minHeight: 0, minWidth: 0, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+          <Box sx={{ flex: 1, minHeight: 0, minWidth: 0, display: 'flex', flexDirection: 'column', width: '100%' }}>
             <Calendar
               key={`calendar-${showFilters}`}
               ref={calendarRef}

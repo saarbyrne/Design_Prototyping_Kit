@@ -22,45 +22,13 @@ import {
   Notifications
 } from '@mui/icons-material'
 import MainNavigation from './MainNavigation'
+import { currentUser, availableSquads, pageTitles } from '../data/layout'
 import '../styles/design-tokens.css'
-
-// Mock current user data
-const currentUser = {
-  name: 'Dr. Sarah Mitchell',
-  email: 'sarah.mitchell@example.com',
-  role: 'Sports Medicine Director',
-  avatar: '👩‍⚕️'
-}
-
-// Mock squad data
-const availableSquads = [
-  { id: 1, name: 'First Team', short: 'FT' },
-  { id: 2, name: 'Reserve Team', short: 'RES' },
-  { id: 3, name: 'Academy U21', short: 'U21' },
-  { id: 4, name: 'Academy U18', short: 'U18' }
-]
-
-// Page titles mapping
-const pageTitles = {
-  '/dashboard': 'Dashboard',
-  '/medical': 'Medical',
-  '/analysis': 'Analysis',
-  '/athlete': 'Athletes',
-  '/workloads': 'Workload',
-  '/questionnaires': 'Forms',
-  '/forms/form_templates': 'Forms',
-  '/forms/form_answers_sets': 'Forms',
-  '/planning': 'Calendar',
-  '/messages': 'All messages',
-  '/activity': 'Activity log',
-  '/settings': 'Admin',
-  '/help': 'Help'
-}
 
 function MedinahLayoutWithMainNav({ children }) {
   const location = useLocation()
   const navigate = useNavigate()
-  const [isNavOpen, setIsNavOpen] = useState(true)
+  const [isNavOpen, setIsNavOpen] = useState(false)
   const [currentSquad, setCurrentSquad] = useState(availableSquads[0])
   const [userMenuAnchor, setUserMenuAnchor] = useState(null)
   const [isFormsMenuOpen, setIsFormsMenuOpen] = useState(false)
@@ -96,6 +64,7 @@ function MedinahLayoutWithMainNav({ children }) {
   }
 
   const isFormsSection = isFormsMenuOpen
+  const isCalendarPage = location.pathname === '/planning'
   const formsSecondaryItems = [
     { id: 'form_templates', label: 'Form templates', path: '/forms/form_templates' },
     { id: 'form_responses', label: 'Form responses', path: '/forms/form_answers_sets' },
@@ -180,6 +149,7 @@ function MedinahLayoutWithMainNav({ children }) {
         component="main" 
         sx={{ 
           flexGrow: 1, 
+          minWidth: 0,
           display: 'flex', 
           flexDirection: 'column',
           overflow: 'hidden'
@@ -202,8 +172,9 @@ function MedinahLayoutWithMainNav({ children }) {
               variant="h6" 
               component="h1"
               sx={{ 
-                fontWeight: 600,
-                color: 'var(--color-text-primary)',
+                fontWeight: isCalendarPage ? 500 : 600,
+                fontSize: isCalendarPage ? '14px' : undefined,
+                color: isCalendarPage ? 'var(--color-text-secondary)' : 'var(--color-text-primary)',
                 textTransform: 'none'
               }}
             >
@@ -293,6 +264,7 @@ function MedinahLayoutWithMainNav({ children }) {
             flex: 1, 
             overflow: 'auto',
             p: 0,
+            minWidth: 0,
             bgcolor: 'var(--color-background-primary)'
           }}
         >

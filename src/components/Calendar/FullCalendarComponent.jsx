@@ -78,7 +78,7 @@ const FullCalendarComponent = ({
         displayEventTime
         displayEventEnd
         firstDay={1} // Monday start
-        height="auto"
+        height="100%"
         selectable={false}
         droppable={false}
         moreLinkClick="popover"

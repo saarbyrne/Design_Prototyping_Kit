@@ -3,7 +3,7 @@ import { Box, Typography, IconButton, Badge, Popover, Menu, MenuItem } from '@mu
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { StaticDatePicker } from 'playbook-components';
-import { ArrowDropDown, ChevronLeft, ChevronRight, FilterList } from '@mui/icons-material';
+import { ArrowDropDown, ChevronLeft, ChevronRight, FilterAltOutlined } from '@mui/icons-material';
 import Button from './Button';
 
 const CalendarHeader = ({
@@ -75,20 +75,60 @@ const CalendarHeader = ({
     }
   };
 
+  const baseButtonStyle = {
+    alignItems: 'center',
+    border: 0,
+    borderRadius: '3px',
+    cursor: 'pointer',
+    display: 'inline-flex',
+    fontSize: '14px',
+    height: '32px',
+    outline: 'none',
+    padding: '4px 12px',
+    textDecoration: 'none',
+    transition: 'background 0.15s ease-out 0s',
+    fontFamily: 'var(--font-family-primary)',
+  }
+
+  const secondaryButtonStyle = {
+    ...baseButtonStyle,
+    backgroundColor: 'var(--color-secondary)',
+    color: 'var(--color-primary)',
+    fontWeight: 600,
+  };
+
+  const primaryButtonStyle = {
+    ...baseButtonStyle,
+    backgroundColor: 'var(--color-primary)',
+    color: 'var(--color-white)',
+    fontWeight: 600,
+  };
+
+  const navButtonStyle = {
+    ...secondaryButtonStyle,
+    padding: '4px 8px',
+    minWidth: 'auto',
+  };
+
+  const todayButtonStyle = {
+    ...secondaryButtonStyle,
+    marginLeft: 8,
+  };
+
   return (
     <Box
       sx={{
         display: 'flex',
         alignItems: 'center',
-        padding: '16px 24px',
-        backgroundColor: '#ffffff',
-        minHeight: '64px',
+        padding: '12px 24px',
+        backgroundColor: 'var(--color-background-primary)',
+        minHeight: '56px',
+        borderBottom: 'none',
         position: 'relative',
       }}
     >
-      <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, flex: 1 }}>
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-          <Badge
+      <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, flex: 1 }}>
+        <Badge
             badgeContent={activeFilterCount}
             sx={{
               '& .MuiBadge-badge': {
@@ -106,43 +146,36 @@ const CalendarHeader = ({
             <Button
               variant="secondary"
               onClick={onToggleFilters}
+              style={{ ...secondaryButtonStyle, gap: '4px' }}
             >
-              <FilterList sx={{ fontSize: '18px', marginRight: '8px' }} />
               Show filters
+              <FilterAltOutlined sx={{ fontSize: 18 }} />
             </Button>
           </Badge>
-        </Box>
 
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-          <IconButton
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.25, ml: 1 }}>
+          <Button
+            variant="secondary"
             onClick={() => onNavigate && onNavigate('prev')}
-            sx={{
-              color: '#666666',
-              padding: '8px',
-              '&:hover': {
-                backgroundColor: '#f5f5f5',
-              },
-            }}
+            style={navButtonStyle}
+            type="button"
           >
-            <ChevronLeft />
-          </IconButton>
+            <ChevronLeft sx={{ fontSize: 20 }} />
+          </Button>
 
-          <IconButton
+          <Button
+            variant="secondary"
             onClick={() => onNavigate && onNavigate('next')}
-            sx={{
-              color: '#666666',
-              padding: '8px',
-              '&:hover': {
-                backgroundColor: '#f5f5f5',
-              },
-            }}
+            style={navButtonStyle}
+            type="button"
           >
-            <ChevronRight />
-          </IconButton>
+            <ChevronRight sx={{ fontSize: 20 }} />
+          </Button>
 
           <Button
             variant="secondary"
             onClick={() => onNavigate && onNavigate('today')}
+            style={todayButtonStyle}
           >
             Today
           </Button>
@@ -161,9 +194,10 @@ const CalendarHeader = ({
       >
         <Typography
           sx={{
-            color: '#333333',
-            fontSize: '20px',
-            fontWeight: 600,
+            color: 'var(--color-primary)',
+            fontSize: 'var(--font-size-xl)',
+            fontWeight: 700,
+            fontFamily: 'var(--font-family-primary)',
             textAlign: 'center',
           }}
         >
@@ -173,10 +207,10 @@ const CalendarHeader = ({
           onClick={handleDateClick}
           size="small"
           sx={{
-            color: '#666666',
+            color: 'var(--color-primary)',
             padding: '2px',
             '&:hover': {
-              backgroundColor: '#f5f5f5',
+              backgroundColor: 'var(--color-background-secondary)',
             },
           }}
         >
@@ -187,17 +221,19 @@ const CalendarHeader = ({
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, flex: 1, justifyContent: 'flex-end' }}>
         <Button
           variant="secondary"
+          style={secondaryButtonStyle}
         >
           Month
-          <ArrowDropDown sx={{ fontSize: '16px', marginLeft: '8px' }} />
+          <ArrowDropDown sx={{ fontSize: '16px', marginLeft: '4px' }} />
         </Button>
 
         <Button
           variant="primary"
           onClick={handleAddMenuClick}
+          style={primaryButtonStyle}
         >
           Add
-          <ArrowDropDown sx={{ fontSize: '16px', marginLeft: '8px' }} />
+          <ArrowDropDown sx={{ fontSize: '16px', marginLeft: '4px' }} />
         </Button>
       </Box>
 
@@ -275,30 +311,30 @@ const CalendarHeader = ({
                 paddingRight: 2,
               },
               '& .MuiPickersCalendarHeader-label': {
-                fontSize: '16px',
-                fontWeight: 600,
+                fontSize: 16,
+                fontWeight: 700,
                 cursor: 'pointer',
-                color: '#333333',
-                fontFamily: 'Open Sans, sans-serif',
+                color: 'var(--color-primary)',
+                fontFamily: 'var(--font-family-primary)',
                 textTransform: 'none',
                 '&:hover': {
-                  color: 'var(--color-primary)',
+                  color: 'var(--color-primary-hover)',
                 },
               },
               '& .MuiPickersYear-yearButton': {
                 cursor: 'pointer',
-                color: '#333333',
-                fontFamily: 'Open Sans, sans-serif',
-                fontSize: '14px',
+                color: 'var(--color-primary)',
+                fontFamily: 'var(--font-family-primary)',
+                fontSize: 14,
                 fontWeight: 400,
                 textTransform: 'none',
                 '&:hover': {
-                  backgroundColor: '#f2f3f5',
+                  backgroundColor: 'var(--color-primary-light)',
                   color: 'var(--color-primary)',
                 },
                 '&.Mui-selected': {
                   backgroundColor: 'var(--color-primary)',
-                  color: '#ffffff',
+                  color: 'var(--color-white)',
                   '&:hover': {
                     backgroundColor: 'var(--color-primary-hover)',
                   },
@@ -306,18 +342,18 @@ const CalendarHeader = ({
               },
               '& .MuiPickersMonth-monthButton': {
                 cursor: 'pointer',
-                color: '#333333',
-                fontFamily: 'Open Sans, sans-serif',
-                fontSize: '14px',
+                color: 'var(--color-primary)',
+                fontFamily: 'var(--font-family-primary)',
+                fontSize: 14,
                 fontWeight: 400,
                 textTransform: 'none',
                 '&:hover': {
-                  backgroundColor: '#f2f3f5',
+                  backgroundColor: 'var(--color-primary-light)',
                   color: 'var(--color-primary)',
                 },
                 '&.Mui-selected': {
                   backgroundColor: 'var(--color-primary)',
-                  color: '#ffffff',
+                  color: 'var(--color-white)',
                   '&:hover': {
                     backgroundColor: 'var(--color-primary-hover)',
                   },
@@ -325,29 +361,29 @@ const CalendarHeader = ({
               },
               '& .MuiPickersDay-dayButton': {
                 cursor: 'pointer',
-                color: '#333333',
-                fontFamily: 'Open Sans, sans-serif',
-                fontSize: '14px',
+                color: 'var(--color-primary)',
+                fontFamily: 'var(--font-family-primary)',
+                fontSize: 14,
                 fontWeight: 400,
                 textTransform: 'none',
                 '&:hover': {
-                  backgroundColor: '#f2f3f5',
+                  backgroundColor: 'var(--color-primary-light)',
                   color: 'var(--color-primary)',
                 },
                 '&.Mui-selected': {
                   backgroundColor: 'var(--color-primary)',
-                  color: '#ffffff',
+                  color: 'var(--color-white)',
                   '&:hover': {
                     backgroundColor: 'var(--color-primary-hover)',
                   },
                 },
               },
               '& .MuiPickersActionBar-root': {
-                padding: '16px',
-                borderTop: '1px solid #e0e0e0',
+                padding: 16,
+                borderTop: '1px solid var(--color-border-primary)',
               },
               '& .MuiButton-root': {
-                fontFamily: 'Open Sans, sans-serif',
+                fontFamily: 'var(--font-family-primary)',
                 fontSize: '14px',
                 fontWeight: 500,
                 textTransform: 'none',
@@ -356,12 +392,12 @@ const CalendarHeader = ({
                 '&.MuiButton-textPrimary': {
                   color: 'var(--color-primary)',
                   '&:hover': {
-                    backgroundColor: '#f2f3f5',
+                    backgroundColor: 'var(--color-primary-light)',
                   },
                 },
                 '&.MuiButton-containedPrimary': {
                   backgroundColor: 'var(--color-primary)',
-                  color: '#ffffff',
+                  color: 'var(--color-white)',
                   '&:hover': {
                     backgroundColor: 'var(--color-primary-hover)',
                   },

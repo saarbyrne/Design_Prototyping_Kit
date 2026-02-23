@@ -61,6 +61,8 @@ import { Dashboard } from '@mui/icons-material';
 
 ## 📂 File Locations
 
+**Project structure (data, components, design):** See **`PROJECT_STANDARDS.md`** for where data, components, and UI conventions live (e.g. `src/data`, Playbook Components first).
+
 **Design Tokens:** `src/styles/design-tokens.css`
 ```css
 :root {
