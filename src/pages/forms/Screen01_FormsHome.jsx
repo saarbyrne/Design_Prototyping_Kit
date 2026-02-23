@@ -13,7 +13,7 @@ import {
   MenuItem,
   Link
 } from '@mui/material'
-import { DataGrid, GridPagination } from '@mui/x-data-grid'
+import { DataGrid, GridPagination } from 'playbook-components'
 import { SearchOutlined, ExpandMoreOutlined, MoreVertOutlined } from '@mui/icons-material'
 import '../../styles/design-tokens.css'
 import TokenizedDrawerAthleteSelector from '../../components/forms/TokenizedDrawerAthleteSelector'

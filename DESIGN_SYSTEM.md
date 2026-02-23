@@ -4,16 +4,19 @@
 
 **Use components in this order:**
 
-1. **First:** `@saarbyrne/playbook` – Use Playbook components when the package provides an equivalent (e.g. Button, DataGrid, DatePicker, Drawer, Toasts, ConfirmationModal, etc.). Import from `@saarbyrne/playbook/components` or the specific subpath (e.g. `@saarbyrne/playbook/layouts/Drawer`).
-2. **Fallback:** MUI (`@mui/material`, `@mui/icons-material`, `@mui/x-data-grid`, `@mui/x-date-pickers`) – Use when Playbook does not export a suitable component, or when using a Playbook component causes errors.
+1. **First:** **Playbook Components** (`src/playbook-components`) – Custom wrappers around Material UI. Use these whenever they provide an equivalent (e.g. Button, DataGrid, DataGridPremium, DatePicker, Drawer, Toasts, ConfirmationModal, SelectWrapper, TabBar, etc.). Import from `@kitman/playbook/components` or the barrel: `src/playbook-components` (e.g. `import { Button, DataGrid, Drawer } from '../playbook-components'` or via your path to `src/playbook-components`).
+2. **Fallback:** MUI (`@mui/material`, `@mui/icons-material`, `@mui/x-data-grid`, `@mui/x-date-pickers`) – Use when Playbook Components do not export a suitable component, or when you need a primitive not wrapped by Playbook.
 
 ```jsx
-// ✅ Prefer Playbook when available
-import { Button, DataGrid, Drawer } from '@saarbyrne/playbook/components'
+// ✅ Prefer Playbook Components when available
+import { Button, DataGrid, Drawer } from '../playbook-components'
+// or from your path to src/playbook-components
 
 // ✅ Use MUI when Playbook has no equivalent or causes issues
 import { SomeMuiComponent } from '@mui/material'
 ```
+
+**Note:** The Saarbyrne Playbook library has been removed. Playbook Components are the in-repo custom components and are the top priority.
 
 ## 🎨 Core Rules
 

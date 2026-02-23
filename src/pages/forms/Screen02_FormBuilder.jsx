@@ -22,7 +22,7 @@ import {
 } from '@mui/material'
 import { ArrowBackOutlined } from '@mui/icons-material'
 import { LocalizationProvider } from '@mui/x-date-pickers'
-import { DatePicker } from '@mui/x-date-pickers/DatePicker'
+import { DatePicker } from 'playbook-components'
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
 import dayjs from 'dayjs'
 import '../../styles/design-tokens.css'

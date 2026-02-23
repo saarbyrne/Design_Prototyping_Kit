@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Box, Typography, IconButton, Badge, Popover, Menu, MenuItem } from '@mui/material';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
-import { StaticDatePicker } from '@mui/x-date-pickers/StaticDatePicker';
+import { StaticDatePicker } from 'playbook-components';
 import { ArrowDropDown, ChevronLeft, ChevronRight, FilterList } from '@mui/icons-material';
 import Button from './Button';
 

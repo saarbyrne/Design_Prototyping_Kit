@@ -12,10 +12,9 @@ import {
   Link
 } from '@mui/material'
 import { ArrowDropDownOutlined } from '@mui/icons-material'
-import { DataGrid, GridPagination, GridToolbar } from '@mui/x-data-grid'
+import { DataGrid, GridPagination, GridToolbar, DatePicker } from 'playbook-components'
 import { LocalizationProvider } from '@mui/x-date-pickers'
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
-import { DatePicker } from '@mui/x-date-pickers'
 import dayjs from 'dayjs'
 import '../../styles/design-tokens.css'
 import { Button, StatusChip, Icon, PlayerAvatar } from '../../components'

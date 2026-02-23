@@ -10,11 +10,11 @@ npm run validate-design-system # Check compliance
 
 ## 📦 Components
 
-**Priority:** Use **Playbook** (`@saarbyrne/playbook`) first; use **MUI** when Playbook has no equivalent or causes errors. See DESIGN_SYSTEM.md for the full rule.
+**Priority:** Use **Playbook Components** (`src/playbook-components`) first; use **MUI** when Playbook Components have no equivalent or cause errors. See DESIGN_SYSTEM.md for the full rule.
 
 ```jsx
-// Prefer Playbook when it provides the component
-import { Button, DataGrid, Drawer } from '@saarbyrne/playbook/components'
+// Prefer Playbook Components when they provide the component
+import { Button, DataGrid, Drawer } from '../playbook-components'
 
 // Project design-compliant components (icons, avatars, logos)
 import { Button, Icon, Card, PlayerAvatar, LogoImage } from './components'
