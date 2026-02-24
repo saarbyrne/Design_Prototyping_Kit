@@ -38,8 +38,13 @@ export const CALENDAR_VIEWS = {
     eventMinHeight: 15,
     dayHeaderFormat: { weekday: 'short', day: 'numeric' },
   },
+  timeGridWeek: {
+    dayHeaderFormat: { weekday: 'short', day: 'numeric' },
+    allDaySlot: false,
+  },
   timeGridDay: {
     dayHeaderFormat: { weekday: 'short' },
+    allDaySlot: false,
   },
   list: {
     listDayFormat: {

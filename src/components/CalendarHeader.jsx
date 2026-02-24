@@ -22,6 +22,15 @@ const CalendarHeader = ({
   const [selectedDate, setSelectedDate] = useState(currentDate || new Date('2025-09-01'));
   const [datePickerAnchor, setDatePickerAnchor] = useState(null);
   const [addMenuAnchor, setAddMenuAnchor] = useState(null);
+  const [viewMenuAnchor, setViewMenuAnchor] = useState(null);
+
+  const VIEW_LABELS = {
+    dayGridMonth: 'Month',
+    timeGridDay: 'Day',
+    timeGridWeek: 'Week',
+    listWeek: 'List',
+  };
+  const viewLabel = VIEW_LABELS[currentView] || 'Month';
 
   useEffect(() => {
     if (currentDate) {
@@ -72,6 +81,21 @@ const CalendarHeader = ({
       onAddSession();
     } else if (type === 'game' && onAddGame) {
       onAddGame();
+    }
+  };
+
+  const handleViewMenuClick = (event) => {
+    setViewMenuAnchor(event.currentTarget);
+  };
+
+  const handleViewMenuClose = () => {
+    setViewMenuAnchor(null);
+  };
+
+  const handleViewSelect = (viewType) => {
+    handleViewMenuClose();
+    if (onViewChange) {
+      onViewChange(viewType);
     }
   };
 
@@ -221,9 +245,10 @@ const CalendarHeader = ({
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, flex: 1, justifyContent: 'flex-end' }}>
         <Button
           variant="secondary"
+          onClick={handleViewMenuClick}
           style={secondaryButtonStyle}
         >
-          Month
+          {viewLabel}
           <ArrowDropDown sx={{ fontSize: '16px', marginLeft: '4px' }} />
         </Button>
 
@@ -271,6 +296,43 @@ const CalendarHeader = ({
         <MenuItem onClick={() => handleMenuItemClick('event')}>Event</MenuItem>
         <MenuItem onClick={() => handleMenuItemClick('session')}>Session</MenuItem>
         <MenuItem onClick={() => handleMenuItemClick('game')}>Game</MenuItem>
+      </Menu>
+
+      <Menu
+        anchorEl={viewMenuAnchor}
+        open={Boolean(viewMenuAnchor)}
+        onClose={handleViewMenuClose}
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'right',
+        }}
+        transformOrigin={{
+          vertical: 'top',
+          horizontal: 'right',
+        }}
+        PaperProps={{
+          sx: {
+            mt: 1,
+            minWidth: 160,
+            boxShadow: 'var(--shadow-lg)',
+            borderRadius: 'var(--radius-sm)',
+            '& .MuiMenuItem-root': {
+              fontFamily: 'var(--font-family-primary)',
+              fontSize: 'var(--font-size-sm)',
+              fontWeight: 'var(--font-weight-medium)',
+              color: 'var(--color-text-primary)',
+              padding: '10px 16px',
+              '&:hover': {
+                backgroundColor: 'var(--color-background-secondary)',
+              },
+            },
+          },
+        }}
+      >
+        <MenuItem onClick={() => handleViewSelect('dayGridMonth')}>Month</MenuItem>
+        <MenuItem onClick={() => handleViewSelect('timeGridDay')}>Day</MenuItem>
+        <MenuItem onClick={() => handleViewSelect('timeGridWeek')}>Week</MenuItem>
+        <MenuItem onClick={() => handleViewSelect('listWeek')}>List</MenuItem>
       </Menu>
 
       <Popover

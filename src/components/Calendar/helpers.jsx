@@ -34,8 +34,16 @@ export const getEventContent = (
     }
     case CALENDAR_VIEW_OPTIONS.listWeek: {
       return (
-        <div style={eventTextStyles[CALENDAR_VIEW_OPTIONS.listWeek]}>
-          {eventRenderText}
+        <div className="fc-list-event-row">
+          <span className="fc-list-event-time">{timeText}</span>
+          <span
+            className="fc-list-event-dot"
+            style={{
+              backgroundColor: backgroundColor || borderColor,
+              borderColor: borderColor || backgroundColor,
+            }}
+          />
+          <span className="fc-list-event-name">{eventTitle}</span>
         </div>
       );
     }

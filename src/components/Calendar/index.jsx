@@ -1,4 +1,4 @@
-import React, { useState, useRef, forwardRef } from 'react';
+import React, { useState, useRef, forwardRef, useEffect } from 'react';
 import FullCalendarComponent from './FullCalendarComponent';
 import { calendarStyles } from './styles';
 
@@ -17,6 +17,17 @@ const Calendar = forwardRef(({
   );
   const [isFiltersPanelOpen, setIsFiltersPanelOpen] = useState(false);
   const forwardedRef = ref || useRef(null);
+
+  useEffect(() => {
+    if (!selectedCalendarView) return;
+    setCurrentCalendarView(selectedCalendarView);
+    const el = forwardedRef?.current;
+    if (!el?.getApi) return;
+    const api = el.getApi();
+    if (api.view?.type !== selectedCalendarView) {
+      api.changeView(selectedCalendarView);
+    }
+  }, [selectedCalendarView]);
 
   const handleViewChange = (viewInfo) => {
     setCurrentCalendarView(viewInfo.view.type);
