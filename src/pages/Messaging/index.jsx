@@ -34,7 +34,8 @@ import {
   ExpandLess as ExpandLessIcon,
   ChatBubbleOutline as ChatBubbleIcon,
   ArrowBack as ArrowBackIcon,
-  Person as PersonIcon
+  Person as PersonIcon,
+  DeleteOutlined as DeleteIcon
 } from '@mui/icons-material'
 import {
   currentUserId,
@@ -56,7 +57,7 @@ function EmptyStateIllustration() {
     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2, py: 6 }}>
       <Box sx={{ position: 'relative', width: 80, height: 60 }}>
         <Box sx={{ position: 'absolute', top: 0, left: 8, width: 24, height: 20, borderRadius: '12px 12px 12px 4px', bgcolor: 'grey.200' }} />
-        <Box sx={{ position: 'absolute', top: 12, left: 24, width: 28, height: 24, borderRadius: '14px 14px 14px 4px', border: '2px solid', borderColor: 'primary.main' }} />
+        <Box sx={{ position: 'absolute', top: 12, left: 24, width: 28, height: 24, borderRadius: '14px 14px 14px 4px', border: '2px solid', borderColor: 'var(--color-primary)' }} />
         <Box sx={{ position: 'absolute', top: 28, left: 16, width: 32, height: 22, borderRadius: '11px 11px 4px 11px', bgcolor: 'grey.300', '&::after': { content: '"..."', fontSize: 10, position: 'absolute', left: 8, top: 6 } }} />
       </Box>
       <Typography variant="body2" color="text.secondary">No messages yet</Typography>
@@ -91,6 +92,7 @@ export default function Messaging() {
 
   const handleSelectConversation = (id) => {
     setSelectedId(id)
+    setConversations(prev => prev.map(c => c.id === id ? { ...c, unreadCount: 0 } : c))
     setLoading(true)
     setMessages([])
     setTimeout(() => {
@@ -208,18 +210,30 @@ export default function Messaging() {
             <ListItemButton key={c.id} selected={selectedId === c.id} onClick={() => handleSelectConversation(c.id)} sx={{ py: 1 }}>
               <ListItemIcon sx={{ minWidth: 36 }}><PersonIcon fontSize="small" /></ListItemIcon>
               <ListItemText primary={c.name} primaryTypographyProps={{ noWrap: true }} />
+              {(c.unreadCount ?? 0) > 0 && (
+                <Box component="span" sx={{ ml: 0.5, minWidth: 20, height: 20, borderRadius: '50%', bgcolor: 'var(--color-primary)', color: 'var(--color-white)', fontSize: 11, fontWeight: 600, display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>{c.unreadCount > 99 ? '99+' : c.unreadCount}</Box>
+              )}
             </ListItemButton>
           ))}
           <Box sx={{ px: 2, py: 1, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
             <Typography variant="caption" color="text.secondary" fontWeight={600}>DIRECT MESSAGES</Typography>
             <IconButton size="small" onClick={handleAddDM}><AddIcon fontSize="small" /></IconButton>
           </Box>
-          {conversations.filter(c => c.type === 'dm').map((c) => (
-            <ListItemButton key={c.id} selected={selectedId === c.id} onClick={() => handleSelectConversation(c.id)} sx={{ py: 1 }}>
-              <ListItemIcon sx={{ minWidth: 36 }}><Avatar sx={{ width: 28, height: 28, bgcolor: 'grey.400', fontSize: 12 }}>{c.name.slice(0, 1)}</Avatar></ListItemIcon>
-              <ListItemText primary={c.name} primaryTypographyProps={{ noWrap: true }} />
-            </ListItemButton>
-          ))}
+          {conversations.filter(c => c.type === 'dm').map((c) => {
+            const otherId = c.participantIds?.find(pid => pid !== currentUserId)
+            const otherUser = otherId ? getUserById(otherId) : null
+            return (
+              <ListItemButton key={c.id} selected={selectedId === c.id} onClick={() => handleSelectConversation(c.id)} sx={{ py: 1 }}>
+                <ListItemIcon sx={{ minWidth: 36 }}>
+                  <Avatar src={otherUser?.avatarUrl} sx={{ width: 28, height: 28, bgcolor: 'grey.400', fontSize: 12 }}>{c.name.slice(0, 1)}</Avatar>
+                </ListItemIcon>
+                <ListItemText primary={c.name} primaryTypographyProps={{ noWrap: true }} />
+                {(c.unreadCount ?? 0) > 0 && (
+                  <Box component="span" sx={{ ml: 0.5, minWidth: 20, height: 20, borderRadius: '50%', bgcolor: 'var(--color-primary)', color: 'var(--color-white)', fontSize: 11, fontWeight: 600, display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>{c.unreadCount > 99 ? '99+' : c.unreadCount}</Box>
+                )}
+              </ListItemButton>
+            )
+          })}
         </Box>
       </Box>
 
@@ -229,7 +243,13 @@ export default function Messaging() {
           <>
             <Box sx={{ p: 1.5, borderBottom: '1px solid var(--color-border-primary)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                <Avatar sx={{ width: 32, height: 32, bgcolor: 'grey.400', fontSize: 14 }}>{selected.name.slice(0, 1)}</Avatar>
+                {isChannel ? (
+                  <Avatar sx={{ width: 32, height: 32, bgcolor: 'grey.400', fontSize: 14 }}>{selected.name.slice(0, 1)}</Avatar>
+                ) : (() => {
+                  const otherId = selected.participantIds?.find(pid => pid !== currentUserId)
+                  const otherUser = otherId ? getUserById(otherId) : null
+                  return <Avatar src={otherUser?.avatarUrl} sx={{ width: 32, height: 32, bgcolor: 'grey.400', fontSize: 14 }}>{selected.name.slice(0, 1)}</Avatar>
+                })()}
                 <Typography variant="subtitle2" fontWeight={600}>{selected.name}</Typography>
                 <Typography variant="caption" color="text.secondary" sx={{ ml: 1 }}>{formatTime(selected.lastActivity)}</Typography>
               </Box>
@@ -251,36 +271,67 @@ export default function Messaging() {
               ) : (
                 <>
                   <Typography variant="caption" color="text.secondary" sx={{ alignSelf: 'flex-end', mb: 1 }}>Yesterday</Typography>
-                  {messages.map((msg) => (
-                    <Box key={msg.id} sx={{ display: 'flex', justifyContent: msg.senderId === currentUserId ? 'flex-end' : 'flex-start', mb: 1.5 }}>
-                      <Box sx={{ maxWidth: '75%', display: 'flex', alignItems: 'flex-start', gap: 0.5 }}>
-                        {editingMessageId === msg.id ? (
-                          <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1, width: '100%' }}>
-                            <TextField size="small" fullWidth value={editText} onChange={(e) => setEditText(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && !e.shiftKey && handleSend()} />
-                            <Box sx={{ display: 'flex', gap: 1 }}><IconButton size="small" onClick={handleSend}>Save</IconButton><IconButton size="small" onClick={handleCancelEdit}>Cancel</IconButton></Box>
+                  {messages.map((msg) => {
+                    const sender = getUserById(msg.senderId)
+                    const isOwn = msg.senderId === currentUserId
+                    if (isChannel) {
+                      return (
+                        <Box key={msg.id} sx={{ display: 'flex', flexDirection: 'column', alignItems: isOwn ? 'flex-end' : 'flex-start', mb: 2 }}>
+                          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 0.5 }}>
+                            <Avatar src={sender?.avatarUrl} sx={{ width: 24, height: 24, bgcolor: 'grey.400', fontSize: 11 }}>{sender?.name?.split(' ').map(n => n[0]).join('').slice(0, 2) || '?'}</Avatar>
+                            <Typography variant="caption" fontWeight={600} color="text.primary">{sender?.name ?? 'Unknown'}</Typography>
+                            <Typography variant="caption" color="text.secondary">{formatTime(msg.timestamp)}</Typography>
                           </Box>
-                        ) : (
-                          <>
-                            <Box sx={{ bgcolor: msg.senderId === currentUserId ? 'primary.main' : 'grey.200', color: msg.senderId === currentUserId ? 'white' : 'text.primary', borderRadius: 2, px: 2, py: 1, borderBottomRightRadius: msg.senderId === currentUserId ? 2 : 2, borderBottomLeftRadius: msg.senderId === currentUserId ? 2 : 4 }}>
-                              <Typography variant="body2">{msg.text}</Typography>
-                              {msg.attachments?.length > 0 && <Typography variant="caption" display="block" sx={{ mt: 0.5 }}>📎 {msg.attachments.length} file(s)</Typography>}
-                              <Typography variant="caption" sx={{ opacity: 0.8 }}>{formatTime(msg.timestamp)}</Typography>
+                          {editingMessageId === msg.id ? (
+                            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1, width: '100%', maxWidth: '75%' }}>
+                              <TextField size="small" fullWidth value={editText} onChange={(e) => setEditText(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && !e.shiftKey && handleSend()} />
+                              <Box sx={{ display: 'flex', gap: 1 }}><IconButton size="small" onClick={handleSend}>Save</IconButton><IconButton size="small" onClick={handleCancelEdit}>Cancel</IconButton></Box>
                             </Box>
-                            {msg.senderId === currentUserId && (
-                              <IconButton size="small" onClick={(e) => handleOpenMessageMenu(e, msg)}><MoreVertIcon fontSize="small" /></IconButton>
-                            )}
-                          </>
-                        )}
+                          ) : (
+                            <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 0.5 }}>
+                              <Box sx={{ bgcolor: isOwn ? 'var(--color-primary)' : 'grey.200', color: isOwn ? 'var(--color-white)' : 'text.primary', borderRadius: 2, px: 2, py: 1 }}>
+                                <Typography variant="body2">{msg.text}</Typography>
+                                {msg.attachments?.length > 0 && <Typography variant="caption" display="block" sx={{ mt: 0.5 }}>📎 {msg.attachments.length} file(s)</Typography>}
+                              </Box>
+                              {isOwn && (
+                                <IconButton size="small" onClick={(e) => handleOpenMessageMenu(e, msg)}><MoreVertIcon fontSize="small" /></IconButton>
+                              )}
+                            </Box>
+                          )}
+                        </Box>
+                      )
+                    }
+                    return (
+                      <Box key={msg.id} sx={{ display: 'flex', justifyContent: isOwn ? 'flex-end' : 'flex-start', mb: 1.5 }}>
+                        <Box sx={{ maxWidth: '75%', display: 'flex', alignItems: 'flex-start', gap: 0.5 }}>
+                          {editingMessageId === msg.id ? (
+                            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1, width: '100%' }}>
+                              <TextField size="small" fullWidth value={editText} onChange={(e) => setEditText(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && !e.shiftKey && handleSend()} />
+                              <Box sx={{ display: 'flex', gap: 1 }}><IconButton size="small" onClick={handleSend}>Save</IconButton><IconButton size="small" onClick={handleCancelEdit}>Cancel</IconButton></Box>
+                            </Box>
+                          ) : (
+                            <>
+                              <Box sx={{ bgcolor: isOwn ? 'var(--color-primary)' : 'grey.200', color: isOwn ? 'var(--color-white)' : 'text.primary', borderRadius: 2, px: 2, py: 1, borderBottomRightRadius: isOwn ? 2 : 2, borderBottomLeftRadius: isOwn ? 2 : 4 }}>
+                                <Typography variant="body2">{msg.text}</Typography>
+                                {msg.attachments?.length > 0 && <Typography variant="caption" display="block" sx={{ mt: 0.5 }}>📎 {msg.attachments.length} file(s)</Typography>}
+                                <Typography variant="caption" sx={{ opacity: 0.8 }}>{formatTime(msg.timestamp)}</Typography>
+                              </Box>
+                              {isOwn && (
+                                <IconButton size="small" onClick={(e) => handleOpenMessageMenu(e, msg)}><MoreVertIcon fontSize="small" /></IconButton>
+                              )}
+                            </>
+                          )}
+                        </Box>
                       </Box>
-                    </Box>
-                  ))}
+                    )
+                  })}
                 </>
               )}
             </Box>
 
             <Menu anchorEl={messageMenuAnchor} open={Boolean(messageMenuAnchor)} onClose={() => { setMessageMenuAnchor(null); setMessageMenuTarget(null) }}>
               <MenuItem onClick={() => messageMenuTarget && handleStartEditMessage(messageMenuTarget)}><EditIcon fontSize="small" sx={{ mr: 1 }} /> Edit</MenuItem>
-              <MenuItem onClick={() => messageMenuTarget && handleDeleteMessage(messageMenuTarget.id)}>Delete</MenuItem>
+              <MenuItem onClick={() => messageMenuTarget && handleDeleteMessage(messageMenuTarget.id)}><DeleteIcon fontSize="small" sx={{ mr: 1 }} /> Delete</MenuItem>
             </Menu>
 
             <Box sx={{ p: 1.5, borderTop: '1px solid var(--color-border-primary)' }}>
@@ -305,7 +356,7 @@ export default function Messaging() {
                   onKeyDown={(e) => e.key === 'Enter' && !e.shiftKey && (e.preventDefault(), handleSend())}
                   InputProps={{ sx: { borderRadius: 2, bgcolor: 'grey.50' } }}
                 />
-                <IconButton color="primary" onClick={handleSend} disabled={!inputValue.trim() && attachments.length === 0}><SendIcon /></IconButton>
+                <IconButton sx={{ color: 'var(--color-primary)' }} onClick={handleSend} disabled={!inputValue.trim() && attachments.length === 0}><SendIcon /></IconButton>
               </Box>
             </Box>
           </>
@@ -341,7 +392,7 @@ export default function Messaging() {
                 <Divider sx={{ my: 1 }} />
                 {mockUsers.filter(u => u.id !== currentUserId).map((user) => (
                   <ListItemButton key={user.id} onClick={() => handleStartDM(user.id)} sx={{ py: 1 }}>
-                    <ListItemIcon sx={{ minWidth: 36 }}><Avatar sx={{ width: 28, height: 28, bgcolor: 'grey.400', fontSize: 12 }}>{user.name.slice(0, 1)}</Avatar></ListItemIcon>
+                    <ListItemIcon sx={{ minWidth: 36 }}><Avatar src={user.avatarUrl} sx={{ width: 28, height: 28, bgcolor: 'grey.400', fontSize: 12 }}>{user.name.slice(0, 1)}</Avatar></ListItemIcon>
                     <ListItemText primary={user.name} />
                   </ListItemButton>
                 ))}
@@ -397,7 +448,7 @@ export default function Messaging() {
                   <FormControlLabel control={<Switch checked={staffCanSend} onChange={(e) => setStaffCanSend(e.target.checked)} />} label="Staff can send messages" sx={{ display: 'block', mb: 2 }} />
                   <Box sx={{ display: 'flex', gap: 1 }}>
                     <Typography component="button" variant="body2" onClick={handleBackToMembers} sx={{ border: '1px solid', borderColor: 'grey.300', borderRadius: 1, px: 2, py: 1, cursor: 'pointer', bgcolor: 'transparent' }}>Back</Typography>
-                    <Typography component="button" variant="body2" onClick={handleCreateChannel} sx={{ bgcolor: 'primary.main', color: 'white', borderRadius: 1, px: 2, py: 1, cursor: 'pointer', border: 'none' }}>Create Channel</Typography>
+                    <Typography component="button" variant="body2" onClick={handleCreateChannel} sx={{ bgcolor: 'var(--color-primary)', color: 'var(--color-white)', borderRadius: 1, px: 2, py: 1, cursor: 'pointer', border: 'none' }}>Create Channel</Typography>
                   </Box>
                 </>
               )}
@@ -431,7 +482,7 @@ export default function Messaging() {
           <Divider />
           {channelMembers.map((m) => (
             <Box key={m.id} sx={{ display: 'flex', alignItems: 'center', gap: 1, py: 1.5, borderBottom: '1px solid', borderColor: 'divider' }}>
-              <Avatar sx={{ width: 32, height: 32, bgcolor: m.isAdmin ? 'primary.main' : 'grey.400', fontSize: 12 }}>{m.name?.slice(0, 1)}</Avatar>
+              <Avatar src={m.avatarUrl} sx={{ width: 32, height: 32, bgcolor: m.isAdmin ? 'var(--color-primary)' : 'grey.400', fontSize: 12 }}>{m.name?.slice(0, 1)}</Avatar>
               <ListItemText primary={m.name} secondary={m.isAdmin ? 'Channel admin' : null} />
             </Box>
           ))}
