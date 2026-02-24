@@ -11,12 +11,7 @@ import {
   MenuItem,
   Badge,
   Select,
-  CssBaseline,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemText,
-  Divider
+  CssBaseline
 } from '@mui/material'
 import { 
   Notifications
@@ -31,23 +26,14 @@ function MedinahLayoutWithMainNav({ children }) {
   const [isNavOpen, setIsNavOpen] = useState(false)
   const [currentSquad, setCurrentSquad] = useState(availableSquads[0])
   const [userMenuAnchor, setUserMenuAnchor] = useState(null)
-  const [isFormsMenuOpen, setIsFormsMenuOpen] = useState(false)
 
   const getPageTitle = () => {
+    if (location.pathname.startsWith('/forms')) return 'Forms'
     return pageTitles[location.pathname] || 'Dashboard'
   }
 
   const handleNavToggle = () => {
     setIsNavOpen(!isNavOpen)
-  }
-
-  const handleFormsToggle = () => {
-    setIsFormsMenuOpen((prev) => !prev)
-  }
-
-  const handleFormsSecondaryClick = (path) => {
-    navigate(path)
-    setIsFormsMenuOpen(false)
   }
 
   const handleUserMenuOpen = (event) => {
@@ -63,12 +49,8 @@ function MedinahLayoutWithMainNav({ children }) {
     setCurrentSquad(squad)
   }
 
-  const isFormsSection = isFormsMenuOpen
   const isCalendarPage = location.pathname === '/planning'
-  const formsSecondaryItems = [
-    { id: 'form_templates', label: 'Form templates', path: '/forms/form_templates' },
-    { id: 'form_responses', label: 'Form responses', path: '/forms/form_answers_sets' },
-  ]
+  const isFormsPage = location.pathname.startsWith('/forms')
 
   return (
     <>
@@ -79,71 +61,7 @@ function MedinahLayoutWithMainNav({ children }) {
         isOpen={isNavOpen}
         onToggle={handleNavToggle}
         variant="permanent"
-        onFormsToggle={handleFormsToggle}
-        isFormsMenuOpen={isFormsMenuOpen}
       />
-
-      {/* Secondary Navigation for Forms */}
-      {isFormsSection && (
-        <Box
-          className="mainNavBarDesktop__secondaryMenu mainNavBarDesktop__secondaryMenu--open mainNavBarDesktop__secondaryMenu--mainMenuOpen"
-          sx={{
-            position: 'fixed',
-            top: 0,
-            left: isNavOpen ? 'var(--layout-nav-width)' : 'var(--layout-nav-width-collapsed)',
-            height: '100vh',
-            width: 260,
-            zIndex: 1200,
-            background: 'linear-gradient(180deg, #000000 0%, #111111 40%, #000000 70%, #040037ff 90%, #040037ff 100%)',
-            color: '#ffffff',
-            boxShadow: 'var(--shadow-md)',
-            display: 'flex',
-            flexDirection: 'column',
-            borderRight: '1px solid rgba(255,255,255,0.12)'
-          }}
-        >
-          <Box className="mainNavBarDesktop__secondaryMenuTitle" sx={{ px: 2, py: 1.5, fontWeight: 600 }}>
-            Forms
-          </Box>
-          <Divider sx={{ borderColor: 'rgba(255,255,255,0.12)' }} />
-          <List sx={{ py: 0 }}>
-            {formsSecondaryItems.map((item) => {
-              const isActive = location.pathname === item.path
-              return (
-                <ListItem key={item.id} disablePadding className={`mainNavBarDesktop__secondaryMenuItem${isActive ? ' mainNavBarDesktop__secondaryMenuItem--active' : ''}`}>
-                  <ListItemButton
-                    onClick={() => handleFormsSecondaryClick(item.path)}
-                    sx={{
-                      height: 40,
-                      px: 2,
-                      position: 'relative',
-                      color: '#ffffff',
-                      '&::before': isActive ? {
-                        content: '""',
-                        position: 'absolute',
-                        left: 0,
-                        top: 0,
-                        bottom: 0,
-                        width: '3px',
-                        backgroundColor: '#ffffff'
-                      } : {},
-                      '&:hover': {
-                        backgroundColor: 'rgba(255,255,255,0.08)'
-                      }
-                    }}
-                  >
-                    <ListItemText
-                      primary={item.label}
-                      primaryTypographyProps={{ fontSize: 14 }}
-                    />
-                  </ListItemButton>
-                </ListItem>
-              )
-            })}
-          </List>
-        </Box>
-      )}
-
       {/* Main Content Area */}
       <Box 
         component="main" 
@@ -172,9 +90,10 @@ function MedinahLayoutWithMainNav({ children }) {
               variant="h6" 
               component="h1"
               sx={{ 
-                fontWeight: isCalendarPage ? 500 : 600,
-                fontSize: isCalendarPage ? '14px' : undefined,
-                color: isCalendarPage ? 'var(--color-text-secondary)' : 'var(--color-text-primary)',
+                fontWeight: (isCalendarPage || isFormsPage) ? 500 : 600,
+                fontSize: (isCalendarPage || isFormsPage) ? '14px' : undefined,
+                color: (isCalendarPage || isFormsPage) ? 'var(--color-text-secondary)' : 'var(--color-text-primary)',
+                fontFamily: 'var(--font-family-primary)',
                 textTransform: 'none'
               }}
             >

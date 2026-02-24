@@ -63,7 +63,7 @@ const navigationItems = [
     id: 'forms', 
     label: 'Forms', 
     icon: AssignmentOutlined, 
-    path: '/forms/form_templates',
+    path: '/forms',
     section: 'main'
   },
   { 
@@ -112,25 +112,18 @@ function MainNavigation({
   isOpen = true, 
   onToggle, 
   variant = 'permanent',
-  onFormsToggle = () => {},
-  isFormsMenuOpen = false,
   ...props 
 }) {
   const location = useLocation()
   const navigate = useNavigate()
 
   const handleItemClick = (item) => {
-    if (item.id === 'forms') {
-      // Toggle the forms flyover only; do not navigate
-      onFormsToggle()
-      return
-    }
     navigate(item.path)
   }
 
   const renderNavItem = (item, isCollapsed = false) => {
-    const isActive = item.id === 'forms'
-      ? location.pathname.startsWith('/forms') || isFormsMenuOpen
+    const isActive = item.path === '/forms'
+      ? (location.pathname === '/forms' || location.pathname.startsWith('/forms/'))
       : location.pathname === item.path
     const IconComponent = item.icon
 
@@ -309,9 +302,7 @@ function MainNavigation({
 MainNavigation.propTypes = {
   isOpen: PropTypes.bool,
   onToggle: PropTypes.func,
-  variant: PropTypes.oneOf(['permanent', 'persistent', 'temporary']),
-  onFormsToggle: PropTypes.func,
-  isFormsMenuOpen: PropTypes.bool
+  variant: PropTypes.oneOf(['permanent', 'persistent', 'temporary'])
 }
 
 export default MainNavigation

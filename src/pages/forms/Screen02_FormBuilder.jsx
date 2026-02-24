@@ -541,7 +541,7 @@ export default function Screen02_FormBuilder() {
         <Box
           component="button"
           type="button"
-          onClick={() => navigate('/questionnaires')}
+          onClick={() => navigate('/forms')}
           aria-label="Back to forms overview"
           sx={{
             background: 'transparent',

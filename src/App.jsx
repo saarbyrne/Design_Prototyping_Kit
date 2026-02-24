@@ -4,8 +4,8 @@ import SimplePage from './pages/SimplePage'
 import Athletes from './pages/Athletes'
 import CalendarPage from './pages/Calendar'
 import Screen01_FormsHome from './pages/forms/Screen01_FormsHome'
+import FormsPage from './pages/forms/FormsPage'
 import Screen02_FormBuilder from './pages/forms/Screen02_FormBuilder'
-import Screen02_FormResponses from './pages/forms/Screen02_FormResponses'
 import Screen03_FormResponsesForTemplate from './pages/forms/Screen03_FormResponsesForTemplate'
 import Screen04_FormAnswerSet from './pages/forms/Screen04_FormAnswerSet'
 import Messaging from './pages/Messaging'
@@ -21,8 +21,9 @@ function App() {
         <Route path="/athlete" element={<Athletes />} />
         <Route path="/workloads" element={<SimplePage pageName="Workload" />} />
         <Route path="/questionnaires" element={<Screen01_FormsHome />} />
-        <Route path="/forms/form_templates" element={<Screen01_FormsHome />} />
-        <Route path="/forms/form_answers_sets" element={<Screen02_FormResponses />} />
+        <Route path="/forms" element={<FormsPage />} />
+        <Route path="/forms/form_templates" element={<FormsPage />} />
+        <Route path="/forms/form_answers_sets" element={<FormsPage />} />
         <Route path="/forms/form_answers_sets/forms/:formId" element={<Screen03_FormResponsesForTemplate />} />
         <Route path="/forms/form_answers_sets/:answerSetId" element={<Screen04_FormAnswerSet />} />
         <Route path="/forms/:formId/build" element={<Screen02_FormBuilder />} />

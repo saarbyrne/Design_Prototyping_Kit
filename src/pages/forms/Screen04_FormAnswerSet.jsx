@@ -84,7 +84,7 @@ export default function Screen04_FormAnswerSet() {
     <Box sx={{ py: 2, bgcolor: 'var(--color-background-primary)', height: '100%' }}>
       <Paper elevation={0} sx={{ borderRadius: 'var(--radius-md)', overflow: 'hidden' }}>
         <Box sx={{ px: 3, height: 72, display: 'flex', alignItems: 'center', gap: 1 }}>
-          <IconButton aria-label="Back" size="small" onClick={() => navigate('/forms/form_answers_sets', { state: { initialTab: 'completed' } })} sx={{ color: 'var(--color-text-secondary)' }}>
+          <IconButton aria-label="Back" size="small" onClick={() => navigate('/forms', { state: { initialTab: 'completed' } })} sx={{ color: 'var(--color-text-secondary)' }}>
             <ArrowBackOutlined fontSize="small" />
           </IconButton>
           <Typography variant="h5" sx={{ color: 'var(--color-text-primary)', fontWeight: 600 }}>

@@ -55,7 +55,7 @@ function CreateFormDrawer({ open, onClose, onSubmit, categories = [] }) {
       <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%', width: '100%' }}>
         {/* Header */}
         <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', px: 3, py: 1.5 }}>
-          <Typography variant="h6" sx={{ fontWeight: 600 }}>Create form</Typography>
+          <Typography variant="h6" sx={{ fontWeight: 600, fontFamily: 'var(--font-family-primary)', fontSize: 'var(--font-size-lg)', color: 'var(--color-text-primary)' }}>Create form</Typography>
           <IconButton onClick={handleClose} size="small" aria-label="Close">
             <CloseOutlined />
           </IconButton>
@@ -122,10 +122,11 @@ function CreateFormDrawer({ open, onClose, onSubmit, categories = [] }) {
               disableElevation
               disabled={!title.trim()}
               sx={{
-                backgroundColor: 'var(--button-primary-bg)',
+                backgroundColor: 'var(--color-primary)',
                 color: 'var(--button-primary-color)',
                 textTransform: 'none',
-                '&:hover': { backgroundColor: 'var(--button-primary-hover-bg)' }
+                fontFamily: 'var(--font-family-primary)',
+                '&:hover': { backgroundColor: 'var(--color-primary-hover)' }
               }}
               onClick={handleCreate}
             >

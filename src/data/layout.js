@@ -22,6 +22,7 @@ export const pageTitles = {
   '/athlete': 'Athletes',
   '/workloads': 'Workload',
   '/questionnaires': 'Forms',
+  '/forms': 'Forms',
   '/forms/form_templates': 'Forms',
   '/forms/form_answers_sets': 'Forms',
   '/planning': 'Calendar',
