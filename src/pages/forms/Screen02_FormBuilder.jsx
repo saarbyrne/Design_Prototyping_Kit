@@ -407,6 +407,17 @@ export default function Screen02_FormBuilder() {
               <RadioGroup
                 value={previewValues[question.id] || ''}
                 onChange={(event) => handlePreviewValueChange(question.id, event.target.value)}
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  flexWrap: 'wrap',
+                  '& .MuiFormControlLabel-root': {
+                    display: 'flex',
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    marginRight: 2,
+                  },
+                }}
               >
                 {(question.options || []).map((option) => (
                   <FormControlLabel key={option} value={option} control={<Radio />} label={option} />

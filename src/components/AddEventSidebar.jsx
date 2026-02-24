@@ -59,6 +59,9 @@ const AddEventSidebar = ({ open, onClose, onSave, athletes = [], staff = [] }) =
     },
     '& .MuiInputLabel-root': {
       color: 'var(--color-text-secondary)',
+      fontSize: 'var(--font-size-sm)',
+      fontWeight: 'var(--placeholder-font-weight)',
+      fontFamily: 'var(--font-family-primary)',
       '&.Mui-focused': { color: 'var(--color-border-focus)' },
       '&.Mui-disabled': { color: 'var(--color-text-disabled)' },
     },
@@ -76,7 +79,13 @@ const AddEventSidebar = ({ open, onClose, onSave, athletes = [], staff = [] }) =
       fontSize: 'var(--font-size-sm)',
       fontWeight: 'var(--font-weight-medium)',
       fontFamily: 'var(--font-family-primary)',
-      '&::placeholder': { color: 'var(--color-text-muted)', opacity: 1 },
+      '&::placeholder': {
+        color: 'var(--placeholder-color) !important',
+        opacity: '1 !important',
+        fontFamily: 'var(--placeholder-font-family) !important',
+        fontSize: 'var(--placeholder-font-size) !important',
+        fontWeight: 'var(--placeholder-font-weight) !important',
+      },
     },
     '& .MuiSelect-select': {
       color: 'var(--color-text-primary)',
@@ -437,6 +446,16 @@ const AddEventSidebar = ({ open, onClose, onSave, athletes = [], staff = [] }) =
                   value={formData.staffVisibility}
                   onChange={(e) => handleInputChange('staffVisibility', e.target.value)}
                   sx={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    flexWrap: 'wrap',
+                    gap: 0,
+                    '& .MuiFormControlLabel-root': {
+                      display: 'flex',
+                      flexDirection: 'row',
+                      alignItems: 'center',
+                      marginRight: 2,
+                    },
                     '& .MuiFormControlLabel-label': { color: 'var(--color-text-primary)' },
                     '& .MuiRadio-root': { color: 'var(--color-text-secondary)', '&.Mui-checked': { color: 'var(--color-primary)' } },
                   }}

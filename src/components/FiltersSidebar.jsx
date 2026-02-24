@@ -1,31 +1,172 @@
 import React, { useState, useMemo } from 'react';
+import {
+  Box,
+  Typography,
+  TextField,
+  FormControl,
+  InputLabel,
+  Select,
+  MenuItem,
+  IconButton,
+  Checkbox,
+  FormControlLabel,
+  Autocomplete,
+  InputAdornment,
+} from '@mui/material';
 import { ExpandMoreOutlined, ExpandLessOutlined, SearchOutlined, CloseOutlined } from '@mui/icons-material';
-import Button from './Button';
 import '../styles/design-tokens.css';
 
-const matchSearch = (label, term) => label.toLowerCase().includes(term.toLowerCase());
+const matchSearch = (label, term) => (label || '').toLowerCase().includes((term || '').toLowerCase());
+
+const SESSION_TYPES = [
+  'Agility',
+  'Workout',
+  'Academy Rugby',
+  'Catapult',
+  'Club Training',
+  'Omegawave',
+  'Player Maker',
+  'Rehab',
+  'Speed',
+];
+
+const TYPE_OPTIONS = ['Squad Sessions', 'Individual Sessions', 'Games', 'Events'];
+
+const COMPETITION_OPTIONS = ['Kitman Series'];
+
+const OPPOSITION_OPTIONS = ['Dublin', 'Cork', 'Galway', 'Australia', 'New Zealand', 'Samoa'];
+
+const SQUADS_MOCK = [
+  '1st team',
+  'Academy Squad',
+  'Academy team',
+  'International Squad',
+  'Kitman Labs - Staff',
+  'Kitman Test Squad',
+  'Player view',
+  'rob test',
+];
+
+const LOCATION_OPTIONS = ['Home', 'Away', 'Neutral'];
+
+const SQUADS_VISIBLE_INITIAL = 8;
+
+/** Same as Add Event modal – ensures identical look and feel */
+const formFieldStyles = {
+  '& .MuiInputBase-root': {
+    backgroundColor: 'var(--color-background-secondary)',
+    borderRadius: 'var(--radius-sm)',
+    '&:hover': { backgroundColor: 'var(--color-background-tertiary)' },
+    '&.Mui-focused': { backgroundColor: 'var(--color-background-primary)' },
+    '&.Mui-disabled': { backgroundColor: 'var(--color-background-tertiary)' },
+  },
+  '& .MuiInputLabel-root': {
+    color: 'var(--color-text-secondary)',
+    fontSize: 'var(--font-size-sm)',
+    fontWeight: 'var(--placeholder-font-weight)',
+    fontFamily: 'var(--font-family-primary)',
+    '&.Mui-focused': { color: 'var(--color-border-focus)' },
+    '&.Mui-disabled': { color: 'var(--color-text-disabled)' },
+  },
+  '& .MuiFilledInput-root': {
+    backgroundColor: 'var(--color-background-secondary)',
+    borderRadius: 'var(--radius-sm)',
+    '&:hover': { backgroundColor: 'var(--color-background-tertiary)' },
+    '&.Mui-focused': { backgroundColor: 'var(--color-background-primary)' },
+    '&:before': { borderBottom: '1px solid var(--color-border-primary)' },
+    '&:hover:not(.Mui-disabled):before': { borderBottom: '1px solid var(--color-border-focus)' },
+    '&.Mui-focused:after': { borderBottom: '2px solid var(--color-border-focus)' },
+  },
+  '& .MuiInputBase-input': {
+    color: 'var(--color-text-primary)',
+    fontSize: 'var(--font-size-sm)',
+    fontWeight: 'var(--font-weight-medium)',
+    fontFamily: 'var(--font-family-primary)',
+    '&::placeholder': {
+      color: 'var(--placeholder-color) !important',
+      opacity: '1 !important',
+      fontFamily: 'var(--placeholder-font-family) !important',
+      fontSize: 'var(--placeholder-font-size) !important',
+      fontWeight: 'var(--placeholder-font-weight) !important',
+    },
+  },
+  '& .MuiSelect-select': {
+    color: 'var(--color-text-primary)',
+    fontSize: 'var(--font-size-sm)',
+    fontWeight: 'var(--font-weight-medium)',
+    fontFamily: 'var(--font-family-primary)',
+  },
+};
 
 /**
- * Filters sidebar for calendar (Squads, Types, Location, etc.)
+ * Filters sidebar for calendar – matches Add Event modal MUI styles; dropdowns use portal so they are not clipped.
  */
-const FiltersSidebar = ({ onClose, selectedFilters, availableOptions, onFiltersChange }) => {
+const FiltersSidebar = ({
+  onClose,
+  selectedFilters,
+  availableOptions,
+  onFiltersChange,
+  athletes = [],
+  staff = [],
+}) => {
   const [squadsExpanded, setSquadsExpanded] = useState(true);
   const [typesExpanded, setTypesExpanded] = useState(true);
+  const [sessionsExpanded, setSessionsExpanded] = useState(true);
+  const [gamesExpanded, setGamesExpanded] = useState(true);
   const [attendeesExpanded, setAttendeesExpanded] = useState(true);
   const [locationExpanded, setLocationExpanded] = useState(true);
-  const [gamesExpanded, setGamesExpanded] = useState(true);
   const [squadSearch, setSquadSearch] = useState('');
-  const [typeSearch, setTypeSearch] = useState('');
   const [locationSearch, setLocationSearch] = useState('');
+  const [squadsShowMore, setSquadsShowMore] = useState(false);
 
-  const filteredSquads = useMemo(() => availableOptions.squads.filter(s => matchSearch(s, squadSearch)), [availableOptions.squads, squadSearch]);
-  const filteredTypes = useMemo(() => availableOptions.types.filter(t => matchSearch(t, typeSearch)), [availableOptions.types, typeSearch]);
-  const filteredLocations = useMemo(() => availableOptions.locations.filter(l => matchSearch(l, locationSearch)), [availableOptions.locations, locationSearch]);
+  const squads = availableOptions.squads?.length > 0 ? availableOptions.squads : SQUADS_MOCK;
+  const filteredSquads = useMemo(() => squads.filter(s => matchSearch(s, squadSearch)), [squads, squadSearch]);
+  const visibleSquads = squadsShowMore ? filteredSquads : filteredSquads.slice(0, SQUADS_VISIBLE_INITIAL);
+  const hasMoreSquads = filteredSquads.length > SQUADS_VISIBLE_INITIAL;
 
-  const toggleInArray = (arr, value) => arr.includes(value) ? arr.filter(v => v !== value) : [...arr, value];
+  const locations = availableOptions.locations?.length > 0 ? availableOptions.locations : LOCATION_OPTIONS;
+  const filteredLocations = useMemo(
+    () => locations.filter(l => matchSearch(l, locationSearch)),
+    [locations, locationSearch]
+  );
+  const otherLocations = useMemo(
+    () => filteredLocations.filter(l => !LOCATION_OPTIONS.includes(l)),
+    [filteredLocations]
+  );
+
+  const staffOptions = useMemo(
+    () => staff.map(s => ({ id: s.id, label: `${s.firstname} ${s.lastname}`.trim() })),
+    [staff]
+  );
+
+  const athleteOptions = useMemo(() => {
+    const list = [];
+    athletes.forEach(a => {
+      list.push({
+        id: a.id,
+        label: `${a.firstname} ${a.lastname}`.trim(),
+        squad_name: (a.squad_name || 'Other').trim(),
+      });
+    });
+    return list;
+  }, [athletes]);
+
+  const toggleInArray = (arr, value) => (arr.includes(value) ? arr.filter(v => v !== value) : [...arr, value]);
   const setAll = (key, values) => onFiltersChange({ ...selectedFilters, [key]: values.slice() });
   const clearAll = (key) => onFiltersChange({ ...selectedFilters, [key]: [] });
-  const handleToggle = (key, value) => onFiltersChange({ ...selectedFilters, [key]: toggleInArray(selectedFilters[key], value) });
+  const handleToggle = (key, value) => onFiltersChange({ ...selectedFilters, [key]: toggleInArray(selectedFilters[key] || [], value) });
+
+  const linkSx = {
+    background: 'none',
+    border: 'none',
+    color: 'var(--color-text-secondary)',
+    fontSize: 'var(--font-size-xs)',
+    cursor: 'pointer',
+    fontWeight: 'var(--font-weight-medium)',
+    textDecoration: 'underline',
+    padding: 0,
+    minWidth: 0,
+  };
 
   const FilterSection = ({
     title,
@@ -35,220 +176,399 @@ const FiltersSidebar = ({ onClose, selectedFilters, availableOptions, onFiltersC
     children,
     onSelectAll,
     onClearAll,
-    showSearch = true,
+    showSearch = false,
     searchValue = '',
-    onSearchChange = () => {}
+    onSearchChange = () => {},
+    searchPlaceholder = 'Search',
+    searchAfterChildren = false,
+    showShowMore = false,
+    showMoreExpanded = false,
+    onShowMoreToggle = () => {},
+    hasMoreSquads = false,
   }) => (
-    <div className="form-section" style={{ margin: 0, boxShadow: 'none', borderRadius: 0, border: 'none' }}>
-      <div
-        className="form-section-header"
+    <Box sx={{ borderBottom: '1px solid var(--color-border-primary)' }}>
+      <Box
         onClick={onToggle}
-        style={{
-          background: '#fff',
-          cursor: 'pointer',
-          padding: 'var(--spacing-md) var(--spacing-lg)',
+        sx={{
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          border: 'none',
-          boxShadow: 'none',
+          py: 1.5,
+          px: 2,
+          cursor: 'pointer',
+          backgroundColor: 'var(--color-background-primary)',
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center' }}>
-          <span className="sidebar-title" style={{ fontSize: 'var(--font-size-sm)', fontWeight: 'var(--font-weight-semibold)' }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+          <Typography variant="body2" sx={{ fontWeight: 600, color: 'var(--color-text-primary)' }}>
             {title}
-          </span>
-          {count > 0 && (
-            <div className="filter-badge">
-              {count}
-            </div>
-          )}
-        </div>
-        {expanded ? <ExpandLessOutlined className="sidebar-close" /> : <ExpandMoreOutlined className="sidebar-close" />}
-      </div>
+          </Typography>
+          <Typography variant="body2" sx={{ color: 'var(--color-text-muted)' }}>{count}</Typography>
+        </Box>
+        {expanded ? <ExpandLessOutlined sx={{ fontSize: 20, color: 'var(--color-text-secondary)' }} /> : <ExpandMoreOutlined sx={{ fontSize: 20, color: 'var(--color-text-secondary)' }} />}
+      </Box>
 
       {expanded && (
-        <div>
-          <div className="form-section-content" style={{ padding: 'var(--spacing-md) var(--spacing-lg)', margin: 0 }}>
-            {showSearch && (
-              <div style={{ position: 'relative', marginBottom: 'var(--spacing-md)' }}>
-                <SearchOutlined
-                  style={{
-                    position: 'absolute',
-                    left: 'var(--spacing-sm)',
-                    top: '50%',
-                    transform: 'translateY(-50%)',
-                    color: 'var(--color-text-secondary)',
-                    fontSize: 'var(--icon-size-medium)'
-                  }}
-                />
-                <input
-                  type="text"
-                  className="form-input"
-                  placeholder="Search"
-                  value={searchValue}
-                  onChange={(e) => onSearchChange(e.target.value)}
-                  style={{ paddingLeft: 'calc(var(--spacing-sm) + var(--icon-size-medium) + var(--spacing-sm))' }}
-                />
-              </div>
-            )}
+        <Box
+          sx={{
+            px: 2,
+            pb: 2,
+            '& .MuiFormControlLabel-root': {
+              display: 'flex',
+              flexDirection: 'row',
+              alignItems: 'center',
+            },
+          }}
+        >
+          {showSearch && !searchAfterChildren && (
+            <TextField
+              fullWidth
+              variant="filled"
+              placeholder={searchPlaceholder}
+              value={searchValue}
+              onChange={(e) => onSearchChange(e.target.value)}
+              size="small"
+              sx={formFieldStyles}
+              InputProps={{
+                endAdornment: (
+                  <InputAdornment position="end">
+                    <SearchOutlined sx={{ fontSize: 20, color: 'var(--color-text-secondary)' }} />
+                  </InputAdornment>
+                ),
+              }}
+            />
+          )}
 
-            {onSelectAll && onClearAll && (
-              <div style={{ display: 'flex', gap: 'var(--spacing-sm)', marginBottom: 'var(--spacing-md)' }}>
-                <button
-                  type="button"
-                  onClick={onSelectAll}
-                  style={{
-                    background: 'none',
-                    border: 'none',
-                    color: 'var(--color-primary)',
-                    fontSize: 'var(--font-size-xs)',
-                    cursor: 'pointer',
-                    fontWeight: 'var(--font-weight-medium)',
-                    textDecoration: 'underline'
-                  }}
-                >
-                  Select all
-                </button>
-                <span style={{ color: 'var(--color-text-disabled)', fontSize: 'var(--font-size-xs)' }}>|</span>
-                <button
-                  type="button"
-                  onClick={onClearAll}
-                  style={{
-                    background: 'none',
-                    border: 'none',
-                    color: 'var(--color-primary)',
-                    fontSize: 'var(--font-size-xs)',
-                    cursor: 'pointer',
-                    fontWeight: 'var(--font-weight-medium)',
-                    textDecoration: 'underline'
-                  }}
-                >
-                  Clear
-                </button>
-              </div>
-            )}
+          {onSelectAll && onClearAll && (
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5, mb: 1, flexWrap: 'wrap' }}>
+              <Box component="button" type="button" onClick={onSelectAll} sx={linkSx}>Select all</Box>
+              <Typography variant="caption" sx={{ color: 'var(--color-text-disabled)' }}>|</Typography>
+              <Box component="button" type="button" onClick={onClearAll} sx={linkSx}>Clear</Box>
+            </Box>
+          )}
 
-            {children}
-          </div>
-          <div style={{ borderBottom: '1px solid var(--color-border-primary)', height: 0 }} />
-        </div>
+          {children}
+
+          {showSearch && searchAfterChildren && (
+            <TextField
+              fullWidth
+              variant="filled"
+              placeholder={searchPlaceholder}
+              value={searchValue}
+              onChange={(e) => onSearchChange(e.target.value)}
+              size="small"
+              sx={{ ...formFieldStyles, mt: 1 }}
+              InputProps={{
+                endAdornment: (
+                  <InputAdornment position="end">
+                    <SearchOutlined sx={{ fontSize: 20, color: 'var(--color-text-secondary)' }} />
+                  </InputAdornment>
+                ),
+              }}
+            />
+          )}
+
+          {showShowMore && hasMoreSquads && (
+            <Box component="button" type="button" onClick={onShowMoreToggle} sx={{ ...linkSx, mt: 0.5 }}>
+              {showMoreExpanded ? 'Show less' : 'Show more'}
+            </Box>
+          )}
+        </Box>
       )}
-    </div>
+    </Box>
   );
 
-  const CheckboxList = ({ items, selected, onChange }) => (
-    <div>
-      {items.map(item => (
-        <div key={item} className="form-checkbox">
-          <input
-            type="checkbox"
-            id={`checkbox-${item}`}
-            checked={selected.includes(item)}
-            onChange={() => onChange(item)}
-          />
-          <label htmlFor={`checkbox-${item}`}>{item}</label>
-        </div>
-      ))}
-      {!items.length && (
-        <div style={{ fontSize: 'var(--font-size-xs)', color: 'var(--color-text-secondary)' }}>No results</div>
-      )}
-    </div>
-  );
+  const sessionsCount = (selectedFilters.sessions || []).length;
+  const attendeesCount = (selectedFilters.attendeesAthletes || []).length + (selectedFilters.attendeesStaff || []).length;
+  const gamesCount = [selectedFilters.gamesCompetition, selectedFilters.gamesOpposition].filter(Boolean).length;
+
+  const sessionsSelected = selectedFilters.sessions || [];
+  const staffSelected = (selectedFilters.attendeesStaff || []).map(id => staffOptions.find(s => s.id === id)).filter(Boolean);
+  const athletesSelected = (selectedFilters.attendeesAthletes || []).map(id => athleteOptions.find(a => a.id === id)).filter(Boolean);
 
   return (
-    <div
-      style={{
-        width: '340px',
+    <Box
+      sx={{
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
         backgroundColor: 'var(--color-background-primary)',
         borderRight: '1px solid var(--color-border-primary)',
-        height: '100%',
-        overflowY: 'auto',
-        position: 'relative',
+        overflow: 'hidden',
       }}
     >
-      <div className="sidebar-header">
-        <h2 className="sidebar-title">Filters</h2>
-        <CloseOutlined className="sidebar-close" onClick={onClose} />
-      </div>
+      <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: 2, borderBottom: '1px solid var(--color-border-primary)' }}>
+        <Typography variant="h6" sx={{ fontWeight: 600, color: 'var(--color-text-primary)', fontSize: 'var(--font-size-base)' }}>
+          Filters
+        </Typography>
+        <IconButton onClick={onClose} size="small" sx={{ color: 'var(--color-text-secondary)' }}>
+          <CloseOutlined />
+        </IconButton>
+      </Box>
 
-      <div style={{ padding: 0 }}>
+      <Box sx={{ flex: 1, overflowY: 'auto', overflowX: 'hidden' }}>
         <FilterSection
           title="Squads"
-          count={selectedFilters.squads.length}
+          count={selectedFilters.squads?.length || 0}
           expanded={squadsExpanded}
           onToggle={() => setSquadsExpanded(!squadsExpanded)}
-          onSelectAll={() => setAll('squads', availableOptions.squads)}
+          onSelectAll={() => setAll('squads', squads)}
           onClearAll={() => clearAll('squads')}
+          showSearch
           searchValue={squadSearch}
           onSearchChange={setSquadSearch}
+          searchPlaceholder="Search"
+          showShowMore
+          showMoreExpanded={squadsShowMore}
+          onShowMoreToggle={() => setSquadsShowMore(!squadsShowMore)}
+          hasMoreSquads={hasMoreSquads}
         >
-          <CheckboxList
-            items={filteredSquads}
-            selected={selectedFilters.squads}
-            onChange={(value) => handleToggle('squads', value)}
-          />
+          {visibleSquads.map((item) => (
+            <FormControlLabel
+              key={item}
+              control={
+                <Checkbox
+                  size="small"
+                  checked={(selectedFilters.squads || []).includes(item)}
+                  onChange={() => handleToggle('squads', item)}
+                  sx={{ color: 'var(--color-text-secondary)', '&.Mui-checked': { color: 'var(--color-primary)' } }}
+                />
+              }
+              label={<Typography variant="body2" sx={{ color: 'var(--color-text-primary)' }}>{item}</Typography>}
+              sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', m: 0, mr: 0, mb: 0.25 }}
+            />
+          ))}
         </FilterSection>
 
         <FilterSection
           title="Types"
-          count={selectedFilters.types.length}
+          count={selectedFilters.types?.length || 0}
           expanded={typesExpanded}
           onToggle={() => setTypesExpanded(!typesExpanded)}
-          onSelectAll={() => setAll('types', availableOptions.types)}
+          onSelectAll={() => setAll('types', TYPE_OPTIONS)}
           onClearAll={() => clearAll('types')}
-          searchValue={typeSearch}
-          onSearchChange={setTypeSearch}
-        >
-          <CheckboxList
-            items={filteredTypes}
-            selected={selectedFilters.types}
-            onChange={(value) => handleToggle('types', value)}
-          />
-        </FilterSection>
-
-        <FilterSection
-          title="Attendees"
-          count={0}
-          expanded={attendeesExpanded}
-          onToggle={() => setAttendeesExpanded(!attendeesExpanded)}
           showSearch={false}
         >
-          <div style={{ fontSize: 'var(--font-size-xs)', color: 'var(--color-text-secondary)' }}>
-            (Coming soon)
-          </div>
+          {TYPE_OPTIONS.map((item) => (
+            <FormControlLabel
+              key={item}
+              control={
+                <Checkbox
+                  size="small"
+                  checked={(selectedFilters.types || []).includes(item)}
+                  onChange={() => handleToggle('types', item)}
+                  sx={{ color: 'var(--color-text-secondary)', '&.Mui-checked': { color: 'var(--color-primary)' } }}
+                />
+              }
+              label={<Typography variant="body2" sx={{ color: 'var(--color-text-primary)' }}>{item}</Typography>}
+              sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', m: 0, mr: 0, mb: 0.25 }}
+            />
+          ))}
         </FilterSection>
 
         <FilterSection
-          title="Location"
-          count={selectedFilters.locations.length}
-          expanded={locationExpanded}
-          onToggle={() => setLocationExpanded(!locationExpanded)}
-          onSelectAll={() => setAll('locations', availableOptions.locations)}
-          onClearAll={() => clearAll('locations')}
-          searchValue={locationSearch}
-          onSearchChange={setLocationSearch}
+          title="Sessions"
+          count={sessionsCount}
+          expanded={sessionsExpanded}
+          onToggle={() => setSessionsExpanded(!sessionsExpanded)}
+          showSearch={false}
         >
-          <CheckboxList
-            items={filteredLocations}
-            selected={selectedFilters.locations}
-            onChange={(value) => handleToggle('locations', value)}
+          <Autocomplete
+            multiple
+            size="small"
+            options={SESSION_TYPES}
+            value={sessionsSelected}
+            onChange={(_, newValue) => onFiltersChange({ ...selectedFilters, sessions: newValue })}
+            disableCloseOnSelect
+            renderOption={(props, option, { selected }) => (
+              <li {...props} key={option}>
+                <Checkbox
+                  size="small"
+                  checked={selected}
+                  sx={{ color: 'var(--color-text-secondary)', '&.Mui-checked': { color: 'var(--color-primary)' } }}
+                />
+                <Typography variant="body2" sx={{ ml: 0.5 }}>{option}</Typography>
+              </li>
+            )}
+            renderInput={(params) => (
+              <TextField
+                {...params}
+                variant="filled"
+                placeholder="Search session types"
+                sx={formFieldStyles}
+              />
+            )}
+            componentsProps={{
+              popper: {
+                sx: { zIndex: 1300 },
+              },
+            }}
           />
         </FilterSection>
 
         <FilterSection
           title="Games"
-          count={0}
+          count={gamesCount}
           expanded={gamesExpanded}
           onToggle={() => setGamesExpanded(!gamesExpanded)}
           showSearch={false}
         >
-          <div style={{ fontSize: 'var(--font-size-xs)', color: 'var(--color-text-secondary)' }}>
-            (Coming soon)
-          </div>
+          <FormControl fullWidth variant="filled" size="small" sx={{ ...formFieldStyles, mb: 1.5 }}>
+            <InputLabel>Competition</InputLabel>
+            <Select
+              value={selectedFilters.gamesCompetition || ''}
+              onChange={(e) => onFiltersChange({ ...selectedFilters, gamesCompetition: e.target.value || undefined })}
+              label="Competition"
+            >
+              <MenuItem value="">Select competition</MenuItem>
+              {COMPETITION_OPTIONS.map((o) => (
+                <MenuItem key={o} value={o}>{o}</MenuItem>
+              ))}
+            </Select>
+          </FormControl>
+          <FormControl fullWidth variant="filled" size="small" sx={formFieldStyles}>
+            <InputLabel>Opposition</InputLabel>
+            <Select
+              value={selectedFilters.gamesOpposition || ''}
+              onChange={(e) => onFiltersChange({ ...selectedFilters, gamesOpposition: e.target.value || undefined })}
+              label="Opposition"
+            >
+              <MenuItem value="">Select opposition</MenuItem>
+              {OPPOSITION_OPTIONS.map((o) => (
+                <MenuItem key={o} value={o}>{o}</MenuItem>
+              ))}
+            </Select>
+          </FormControl>
         </FilterSection>
-      </div>
-    </div>
+
+        <FilterSection
+          title="Attendees"
+          count={attendeesCount}
+          expanded={attendeesExpanded}
+          onToggle={() => setAttendeesExpanded(!attendeesExpanded)}
+          showSearch={false}
+        >
+          <Typography variant="caption" sx={{ color: 'var(--color-text-secondary)', display: 'block', mb: 0.5 }}>Athletes</Typography>
+          <Autocomplete
+            multiple
+            size="small"
+            options={athleteOptions}
+            value={athletesSelected}
+            onChange={(_, newValue) => onFiltersChange({ ...selectedFilters, attendeesAthletes: newValue.map(a => a.id) })}
+            getOptionLabel={(opt) => (opt && opt.label) || ''}
+            groupBy={(opt) => opt.squad_name || 'Other'}
+            disableCloseOnSelect
+            renderOption={(props, option, { selected }) => (
+              <li {...props} key={option.id}>
+                <Checkbox
+                  size="small"
+                  checked={selected}
+                  sx={{ color: 'var(--color-text-secondary)', '&.Mui-checked': { color: 'var(--color-primary)' } }}
+                />
+                <Typography variant="body2" sx={{ ml: 0.5 }}>{option.label}</Typography>
+              </li>
+            )}
+            renderInput={(params) => (
+              <TextField
+                {...params}
+                variant="filled"
+                placeholder="Search for athletes"
+                sx={formFieldStyles}
+              />
+            )}
+            componentsProps={{
+              popper: {
+                sx: { zIndex: 1300 },
+              },
+            }}
+          />
+          <Typography variant="caption" sx={{ color: 'var(--color-text-secondary)', display: 'block', mt: 1.5, mb: 0.5 }}>Staff</Typography>
+          <Autocomplete
+            multiple
+            size="small"
+            options={staffOptions}
+            value={staffSelected}
+            onChange={(_, newValue) => onFiltersChange({ ...selectedFilters, attendeesStaff: newValue.map(s => s.id) })}
+            getOptionLabel={(opt) => (opt && opt.label) || ''}
+            disableCloseOnSelect
+            renderOption={(props, option, { selected }) => (
+              <li {...props} key={option.id}>
+                <Checkbox
+                  size="small"
+                  checked={selected}
+                  sx={{ color: 'var(--color-text-secondary)', '&.Mui-checked': { color: 'var(--color-primary)' } }}
+                />
+                <Typography variant="body2" sx={{ ml: 0.5 }}>{option.label}</Typography>
+              </li>
+            )}
+            renderInput={(params) => (
+              <TextField
+                {...params}
+                variant="filled"
+                placeholder="Search for staff"
+                sx={formFieldStyles}
+              />
+            )}
+            componentsProps={{
+              popper: {
+                sx: { zIndex: 1300 },
+              },
+            }}
+          />
+        </FilterSection>
+
+        <FilterSection
+          title="Location"
+          count={(selectedFilters.locations || []).length}
+          expanded={locationExpanded}
+          onToggle={() => setLocationExpanded(!locationExpanded)}
+          onSelectAll={() => setAll('locations', LOCATION_OPTIONS)}
+          onClearAll={() => clearAll('locations')}
+          showSearch
+          searchValue={locationSearch}
+          onSearchChange={setLocationSearch}
+          searchPlaceholder="Search locations"
+          searchAfterChildren
+        >
+          {LOCATION_OPTIONS.map((item) => (
+            <FormControlLabel
+              key={item}
+              control={
+                <Checkbox
+                  size="small"
+                  checked={(selectedFilters.locations || []).includes(item)}
+                  onChange={() => handleToggle('locations', item)}
+                  sx={{ color: 'var(--color-text-secondary)', '&.Mui-checked': { color: 'var(--color-primary)' } }}
+                />
+              }
+              label={<Typography variant="body2" sx={{ color: 'var(--color-text-primary)' }}>{item}</Typography>}
+              sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', m: 0, mr: 0, mb: 0.25 }}
+            />
+          ))}
+          {otherLocations.length > 0 && (
+            <Box sx={{ mt: 1 }}>
+              <Typography variant="caption" sx={{ color: 'var(--color-text-secondary)', display: 'block', mb: 0.5 }}>Other locations</Typography>
+              {otherLocations.map((item) => (
+                <FormControlLabel
+                  key={item}
+                  control={
+                    <Checkbox
+                      size="small"
+                      checked={(selectedFilters.locations || []).includes(item)}
+                      onChange={() => handleToggle('locations', item)}
+                      sx={{ color: 'var(--color-text-secondary)', '&.Mui-checked': { color: 'var(--color-primary)' } }}
+                    />
+                  }
+                  label={<Typography variant="body2" sx={{ color: 'var(--color-text-primary)' }}>{item}</Typography>}
+                  sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', m: 0, mr: 0, mb: 0.25 }}
+                />
+              ))}
+            </Box>
+          )}
+        </FilterSection>
+      </Box>
+    </Box>
   );
 };
 

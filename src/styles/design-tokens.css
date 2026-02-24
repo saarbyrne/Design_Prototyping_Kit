@@ -180,10 +180,27 @@
   /* Text Guidelines */
   --text-transform: none; /* Sentence case for all text */
   
+  /* Placeholder styling – same font, size, and weight everywhere */
+  --placeholder-font-family: var(--font-family-primary);
+  --placeholder-font-size: var(--font-size-sm);
+  --placeholder-font-weight: var(--font-weight-semibold);
+  --placeholder-color: var(--color-text-muted);
+  
   /* Icon Guidelines */
   --icon-style: 'Material Icons Outlined'; /* Only outlined material icons */
   --icon-size-small: 16px;
   --icon-size-medium: 20px;
   --icon-size-large: 24px;
+}
+
+/* Unified placeholder – same font, size, bold for all inputs, selects, autocompletes */
+input::placeholder,
+textarea::placeholder,
+.MuiInputBase-input::placeholder {
+  font-family: var(--placeholder-font-family) !important;
+  font-size: var(--placeholder-font-size) !important;
+  font-weight: var(--placeholder-font-weight) !important;
+  color: var(--placeholder-color) !important;
+  opacity: 1 !important;
 }
 

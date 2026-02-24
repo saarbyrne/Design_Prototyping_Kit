@@ -35,6 +35,11 @@ const CalendarPage = () => {
   const [filters, setFilters] = useState({
     squads: [],
     types: [],
+    sessions: [],
+    gamesCompetition: undefined,
+    gamesOpposition: undefined,
+    attendeesAthletes: [],
+    attendeesStaff: [],
     locations: [],
   });
 
@@ -54,7 +59,7 @@ const CalendarPage = () => {
     allEvents.forEach(ev => {
       const squad = ev?.extendedProps?.squad;
       if (squad) squads.add(squad);
-      const type = ev?.extendedProps?.eventType;
+      const type = ev?.extendedProps?.typeCategory || ev?.extendedProps?.eventType;
       if (type) types.add(type);
       const location = ev?.extendedProps?.location;
       if (location) locations.add(location);
@@ -67,31 +72,28 @@ const CalendarPage = () => {
   }, [allEvents]);
 
   useEffect(() => {
-    if (availableOptions.squads.length && filters.squads.length === 0) {
-      setFilters({
-        squads: availableOptions.squads,
-        types: availableOptions.types,
-        locations: availableOptions.locations,
-      });
-      setActiveFilters(prev => ({
-        ...prev,
-        squads: availableOptions.squads.length,
-        types: availableOptions.types.length,
-        location: availableOptions.locations.length,
-      }));
-    }
-  }, [availableOptions, filters.squads.length]);
-
-  useEffect(() => {
     if (!allEvents.length) return;
     const filtered = allEvents.filter(ev => {
-      const squad = ev?.extendedProps?.squad;
-      const type = ev?.extendedProps?.eventType;
-      const location = ev?.extendedProps?.location;
-      const squadOk = !filters.squads.length || filters.squads.includes(squad);
-      const typeOk = !filters.types.length || filters.types.includes(type);
-      const locationOk = !filters.locations.length || filters.locations.includes(location);
-      return squadOk && typeOk && locationOk;
+      const ep = ev?.extendedProps || {};
+      const squad = ep.squad;
+      const typeCategory = ep.typeCategory || ep.eventType;
+      const location = ep.location;
+      const sessionType = ep.sessionType;
+      const competition = ep.competition;
+      const opposition = ep.opposition;
+      const attendeeIds = ep.attendeeIds || [];
+      const staffIds = ep.staffIds || [];
+
+      const squadOk = !filters.squads?.length || filters.squads.includes(squad);
+      const typeOk = !filters.types?.length || filters.types.includes(typeCategory);
+      const locationOk = !filters.locations?.length || filters.locations.includes(location);
+      const sessionsOk = !filters.sessions?.length || (sessionType && filters.sessions.includes(sessionType));
+      const competitionOk = !filters.gamesCompetition || competition === filters.gamesCompetition;
+      const oppositionOk = !filters.gamesOpposition || opposition === filters.gamesOpposition;
+      const athletesOk = !filters.attendeesAthletes?.length || filters.attendeesAthletes.some(id => attendeeIds.includes(id));
+      const staffOk = !filters.attendeesStaff?.length || filters.attendeesStaff.some(id => staffIds.includes(id));
+
+      return squadOk && typeOk && locationOk && sessionsOk && competitionOk && oppositionOk && athletesOk && staffOk;
     });
     setEvents(filtered);
   }, [allEvents, filters]);
@@ -155,6 +157,7 @@ const CalendarPage = () => {
 
   const handleAddEvent = () => setShowAddEventSidebar(true);
   const handleSaveEvent = (newEvent) => {
+    setAllEvents(prev => [...prev, newEvent]);
     setEvents(prev => [...prev, newEvent]);
     setShowAddEventSidebar(false);
   };
@@ -162,6 +165,7 @@ const CalendarPage = () => {
 
   const handleAddSession = () => setShowAddSessionDrawer(true);
   const handleSaveSession = (newSession) => {
+    setAllEvents(prev => [...prev, newSession]);
     setEvents(prev => [...prev, newSession]);
     setShowAddSessionDrawer(false);
   };
@@ -169,6 +173,7 @@ const CalendarPage = () => {
 
   const handleAddGame = () => setShowAddGameDrawer(true);
   const handleSaveGame = (newGame) => {
+    setAllEvents(prev => [...prev, newGame]);
     setEvents(prev => [...prev, newGame]);
     setShowAddGameDrawer(false);
   };
@@ -184,6 +189,7 @@ const CalendarPage = () => {
     const id = ev?.id;
     const title = ev?.title ?? 'this event';
     if (window.confirm(`Are you sure you want to delete "${title}"?`)) {
+      setAllEvents(prev => prev.filter(e => e.id !== id));
       setEvents(prev => prev.filter(e => e.id !== id));
     }
   };
@@ -230,9 +236,12 @@ const CalendarPage = () => {
     setFilters(updated);
     setActiveFilters(prev => ({
       ...prev,
-      squads: updated.squads.length,
-      types: updated.types.length,
-      location: updated.locations.length,
+      squads: updated.squads?.length || 0,
+      types: updated.types?.length || 0,
+      location: updated.locations?.length || 0,
+      sessions: updated.sessions?.length || 0,
+      games: (updated.gamesCompetition ? 1 : 0) + (updated.gamesOpposition ? 1 : 0),
+      attendees: (updated.attendeesAthletes?.length || 0) + (updated.attendeesStaff?.length || 0),
     }));
   };
 
@@ -281,6 +290,8 @@ const CalendarPage = () => {
               selectedFilters={filters}
               availableOptions={availableOptions}
               onFiltersChange={handleFiltersChange}
+              athletes={athletesData}
+              staff={staffData}
             />
           </Box>
         )}

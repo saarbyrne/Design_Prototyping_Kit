@@ -11,8 +11,15 @@
     "extendedProps": {
       "eventType": "TRAINING_SESSION",
       "squad": "International Squad",
-      "location": "Training Field",
-      "coach": "Kitman Labs"
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "typeCategory": "Squad Sessions",
+      "sessionType": "Agility",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
     }
   },
   {
@@ -28,7 +35,12 @@
       "eventType": "TRAINING_SESSION",
       "squad": "International Squad",
       "location": "Training Field",
-      "coach": "Kitman Labs"
+      "coach": "Kitman Labs",
+      "typeCategory": "Squad Sessions",
+      "staffIds": [
+        1,
+        2
+      ]
     }
   },
   {
@@ -44,7 +56,13 @@
       "eventType": "TEST_SESSION",
       "squad": "International Squad",
       "location": "Testing Facility",
-      "coach": "Test Team"
+      "coach": "Test Team",
+      "typeCategory": "Individual Sessions",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
     }
   },
   {
@@ -59,8 +77,9 @@
     "extendedProps": {
       "eventType": "RECURRING_EVENT",
       "squad": "International Squad",
-      "location": "Main Facility",
-      "coach": "Regular Coach"
+      "location": "Home",
+      "coach": "Regular Coach",
+      "typeCategory": "Events"
     }
   },
   {
@@ -76,7 +95,18 @@
       "eventType": "TRAINING_SESSION",
       "squad": "International Squad",
       "location": "Training Field",
-      "coach": "Kitman Labs"
+      "coach": "Kitman Labs",
+      "typeCategory": "Squad Sessions",
+      "sessionType": "Club Training",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
     }
   },
   {
@@ -92,7 +122,8 @@
       "eventType": "TRAINING_SESSION",
       "squad": "International Squad",
       "location": "Training Field",
-      "coach": "Kitman Labs"
+      "coach": "Kitman Labs",
+      "typeCategory": "Squad Sessions"
     }
   },
   {
@@ -107,8 +138,14 @@
     "extendedProps": {
       "eventType": "TEST_SESSION",
       "squad": "International Squad",
-      "location": "Testing Facility",
-      "coach": "Test Team"
+      "location": "Home",
+      "coach": "Test Team",
+      "typeCategory": "Individual Sessions",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
     }
   },
   {
@@ -124,7 +161,12 @@
       "eventType": "TEST_SESSION",
       "squad": "International Squad",
       "location": "Testing Facility",
-      "coach": "Test Team"
+      "coach": "Test Team",
+      "typeCategory": "Individual Sessions",
+      "staffIds": [
+        1,
+        2
+      ]
     }
   },
   {
@@ -140,7 +182,14 @@
       "eventType": "RECURRING_EVENT",
       "squad": "International Squad",
       "location": "Main Facility",
-      "coach": "Regular Coach"
+      "coach": "Regular Coach",
+      "typeCategory": "Events",
+      "sessionType": "Speed",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
     }
   },
   {
@@ -155,8 +204,11 @@
     "extendedProps": {
       "eventType": "SERIES_EVENT",
       "squad": "International Squad",
-      "location": "Series Venue",
-      "coach": "Series Coach"
+      "location": "Home",
+      "coach": "Series Coach",
+      "typeCategory": "Games",
+      "competition": "Kitman Series",
+      "opposition": "Australia"
     }
   },
   {
@@ -172,7 +224,17 @@
       "eventType": "TRAINING_SESSION",
       "squad": "International Squad",
       "location": "Training Field",
-      "coach": "Kitman Labs"
+      "coach": "Kitman Labs",
+      "typeCategory": "Squad Sessions",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
     }
   },
   {
@@ -188,7 +250,8 @@
       "eventType": "TRAINING_SESSION",
       "squad": "International Squad",
       "location": "Training Field",
-      "coach": "Kitman Labs"
+      "coach": "Kitman Labs",
+      "typeCategory": "Squad Sessions"
     }
   },
   {
@@ -203,8 +266,15 @@
     "extendedProps": {
       "eventType": "TEST_SESSION",
       "squad": "International Squad",
-      "location": "Testing Facility",
-      "coach": "Test Team"
+      "location": "Home",
+      "coach": "Test Team",
+      "typeCategory": "Individual Sessions",
+      "sessionType": "Catapult",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
     }
   },
   {
@@ -220,7 +290,12 @@
       "eventType": "RECURRING_EVENT",
       "squad": "International Squad",
       "location": "Main Facility",
-      "coach": "Regular Coach"
+      "coach": "Regular Coach",
+      "typeCategory": "Events",
+      "staffIds": [
+        1,
+        2
+      ]
     }
   },
   {
@@ -236,7 +311,13 @@
       "eventType": "TRAINING_SESSION",
       "squad": "International Squad",
       "location": "Training Field",
-      "coach": "Kitman Labs"
+      "coach": "Kitman Labs",
+      "typeCategory": "Squad Sessions",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
     }
   },
   {
@@ -251,8 +332,9 @@
     "extendedProps": {
       "eventType": "TRAINING_SESSION",
       "squad": "International Squad",
-      "location": "Training Field",
-      "coach": "Kitman Labs"
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "typeCategory": "Squad Sessions"
     }
   },
   {
@@ -268,7 +350,18 @@
       "eventType": "TEST_SESSION",
       "squad": "International Squad",
       "location": "Testing Facility",
-      "coach": "Test Team"
+      "coach": "Test Team",
+      "typeCategory": "Individual Sessions",
+      "sessionType": "Rehab",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
     }
   },
   {
@@ -284,7 +377,8 @@
       "eventType": "RECURRING_EVENT",
       "squad": "International Squad",
       "location": "Main Facility",
-      "coach": "Regular Coach"
+      "coach": "Regular Coach",
+      "typeCategory": "Events"
     }
   },
   {
@@ -299,8 +393,14 @@
     "extendedProps": {
       "eventType": "TRAINING_SESSION",
       "squad": "International Squad",
-      "location": "Training Field",
-      "coach": "Kitman Labs"
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "typeCategory": "Squad Sessions",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
     }
   },
   {
@@ -316,7 +416,12 @@
       "eventType": "TRAINING_SESSION",
       "squad": "International Squad",
       "location": "Training Field",
-      "coach": "Kitman Labs"
+      "coach": "Kitman Labs",
+      "typeCategory": "Squad Sessions",
+      "staffIds": [
+        1,
+        2
+      ]
     }
   },
   {
@@ -332,7 +437,14 @@
       "eventType": "TEST_SESSION",
       "squad": "International Squad",
       "location": "Testing Facility",
-      "coach": "Test Team"
+      "coach": "Test Team",
+      "typeCategory": "Individual Sessions",
+      "sessionType": "Academy Rugby",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
     }
   },
   {
@@ -347,8 +459,9 @@
     "extendedProps": {
       "eventType": "RECURRING_EVENT",
       "squad": "International Squad",
-      "location": "Main Facility",
-      "coach": "Regular Coach"
+      "location": "Home",
+      "coach": "Regular Coach",
+      "typeCategory": "Events"
     }
   },
   {
@@ -364,7 +477,17 @@
       "eventType": "TRAINING_SESSION",
       "squad": "International Squad",
       "location": "Training Field",
-      "coach": "Kitman Labs"
+      "coach": "Kitman Labs",
+      "typeCategory": "Squad Sessions",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
     }
   },
   {
@@ -380,7 +503,8 @@
       "eventType": "TRAINING_SESSION",
       "squad": "International Squad",
       "location": "Training Field",
-      "coach": "Kitman Labs"
+      "coach": "Kitman Labs",
+      "typeCategory": "Squad Sessions"
     }
   },
   {
@@ -395,8 +519,15 @@
     "extendedProps": {
       "eventType": "TEST_SESSION",
       "squad": "International Squad",
-      "location": "Testing Facility",
-      "coach": "Test Team"
+      "location": "Home",
+      "coach": "Test Team",
+      "typeCategory": "Individual Sessions",
+      "sessionType": "Player Maker",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
     }
   },
   {
@@ -412,7 +543,5545 @@
       "eventType": "RECURRING_EVENT",
       "squad": "International Squad",
       "location": "Main Facility",
-      "coach": "Regular Coach"
+      "coach": "Regular Coach",
+      "typeCategory": "Events",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "game-dublin",
+    "title": "vs Dublin - Kitman Series",
+    "start": "2025-09-14T15:00:00",
+    "end": "2025-09-14T17:00:00",
+    "backgroundColor": "#B134C1",
+    "borderColor": "#B134C1",
+    "textColor": "#ffffff",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "1st team",
+      "location": "Home",
+      "competition": "Kitman Series",
+      "opposition": "Dublin",
+      "attendeeIds": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "game-cork",
+    "title": "vs Cork - Kitman Series",
+    "start": "2025-09-21T15:00:00",
+    "end": "2025-09-21T17:00:00",
+    "backgroundColor": "#B134C1",
+    "borderColor": "#B134C1",
+    "textColor": "#ffffff",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "Academy Squad",
+      "location": "Away",
+      "competition": "Kitman Series",
+      "opposition": "Cork",
+      "attendeeIds": [
+        5,
+        6
+      ],
+      "staffIds": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "game-nz",
+    "title": "vs New Zealand",
+    "start": "2025-09-28T14:00:00",
+    "end": "2025-09-28T16:00:00",
+    "backgroundColor": "#C0392B",
+    "borderColor": "#C0392B",
+    "textColor": "#ffffff",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "International Squad",
+      "location": "Neutral",
+      "competition": "Kitman Series",
+      "opposition": "New Zealand",
+      "attendeeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "staffIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "session-agility",
+    "title": "Agility Session",
+    "start": "2025-09-03T09:00:00",
+    "end": "2025-09-03T10:00:00",
+    "backgroundColor": "#29AE61",
+    "borderColor": "#29AE61",
+    "textColor": "#ffffff",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "Academy Squad",
+      "location": "Home",
+      "sessionType": "Agility",
+      "attendeeIds": [
+        5,
+        6
+      ],
+      "staffIds": [
+        5
+      ]
+    }
+  },
+  {
+    "id": "session-rehab",
+    "title": "Rehab Session",
+    "start": "2025-09-04T11:00:00",
+    "end": "2025-09-04T12:00:00",
+    "backgroundColor": "#9b58b5",
+    "borderColor": "#9b58b5",
+    "textColor": "#ffffff",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "International Squad",
+      "location": "Home",
+      "sessionType": "Rehab",
+      "attendeeIds": [
+        2
+      ],
+      "staffIds": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "id": "session-catapult",
+    "title": "Catapult Training",
+    "start": "2025-09-10T10:00:00",
+    "end": "2025-09-10T11:30:00",
+    "backgroundColor": "#036BC6",
+    "borderColor": "#036BC6",
+    "textColor": "#ffffff",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "1st team",
+      "location": "Away",
+      "sessionType": "Catapult",
+      "attendeeIds": [
+        1,
+        3,
+        4
+      ],
+      "staffIds": [
+        1
+      ]
+    }
+  },
+  {
+    "id": "9000001",
+    "title": "vs Samoa - Kitman Series",
+    "start": "2025-01-06T16:00:00",
+    "end": "2025-01-06T17:30:00",
+    "backgroundColor": "#B134C1",
+    "borderColor": "#B134C1",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000001",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "1st team",
+      "location": "Away",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "Galway",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000002",
+    "title": "Kitman Series",
+    "start": "2025-01-07T14:00:00",
+    "end": "2025-01-07T15:30:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000002",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "International Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "sessionType": "Club Training"
+    }
+  },
+  {
+    "id": "9000003",
+    "title": "KL",
+    "start": "2025-01-16T11:00:00",
+    "end": "2025-01-16T12:00:00",
+    "backgroundColor": "#01205D",
+    "borderColor": "#01205D",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000003",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "Academy Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "sessionType": "Rehab",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000004",
+    "title": "vs Cork - Kitman Series",
+    "start": "2025-01-21T15:00:00",
+    "end": "2025-01-21T17:00:00",
+    "backgroundColor": "#C0392B",
+    "borderColor": "#C0392B",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000004",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "International Squad",
+      "location": "Neutral",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "New Zealand"
+    }
+  },
+  {
+    "id": "9000005",
+    "title": "Individual session",
+    "start": "2025-01-30T11:00:00",
+    "end": "2025-01-30T12:30:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000005",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "Academy Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "sessionType": "Workout",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000006",
+    "title": "Squad session",
+    "start": "2025-01-27T16:00:00",
+    "end": "2025-01-27T18:00:00",
+    "backgroundColor": "#29AE61",
+    "borderColor": "#29AE61",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000006",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "1st team",
+      "location": "Away",
+      "coach": "Kitman Labs",
+      "sessionType": "Agility",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000007",
+    "title": "Repeated event",
+    "start": "2025-02-03T16:00:00",
+    "end": "2025-02-03T17:00:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000007",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "International Squad",
+      "location": "Main Facility",
+      "coach": "Kitman Labs",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000008",
+    "title": "Tactical session",
+    "start": "2025-02-02T17:00:00",
+    "end": "2025-02-02T19:00:00",
+    "backgroundColor": "#036BC6",
+    "borderColor": "#036BC6",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000008",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "Academy Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "sessionType": "Rehab",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000009",
+    "title": "Tactical session",
+    "start": "2025-02-12T17:00:00",
+    "end": "2025-02-12T18:00:00",
+    "backgroundColor": "#29AE61",
+    "borderColor": "#29AE61",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000009",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "International Squad",
+      "location": "Away",
+      "coach": "Kitman Labs",
+      "sessionType": "Player Maker",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000010",
+    "title": "Friendly match",
+    "start": "2025-02-18T10:00:00",
+    "end": "2025-02-18T10:45:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000010",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "1st team",
+      "location": "Home",
+      "coach": "Kitman Labs"
+    }
+  },
+  {
+    "id": "9000011",
+    "title": "Individual session",
+    "start": "2025-02-19T17:00:00",
+    "end": "2025-02-19T17:45:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000011",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "1st team",
+      "location": "Main Facility",
+      "coach": "Kitman Labs",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000012",
+    "title": "Squad session",
+    "start": "2025-02-23T14:00:00",
+    "end": "2025-02-23T16:00:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000012",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "International Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000013",
+    "title": "Team training",
+    "start": "2025-02-23T09:00:00",
+    "end": "2025-02-23T09:45:00",
+    "backgroundColor": "#036BC6",
+    "borderColor": "#036BC6",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000013",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "Academy Squad",
+      "location": "Training Field",
+      "coach": "Kitman Labs",
+      "sessionType": "Rehab"
+    }
+  },
+  {
+    "id": "9000014",
+    "title": "vs Samoa - Kitman Series",
+    "start": "2025-03-02T12:00:00",
+    "end": "2025-03-02T12:45:00",
+    "backgroundColor": "#C0392B",
+    "borderColor": "#C0392B",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000014",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "1st team",
+      "location": "Away",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "Dublin",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000015",
+    "title": "Kitman Series",
+    "start": "2025-03-06T15:00:00",
+    "end": "2025-03-06T16:00:00",
+    "backgroundColor": "#036BC6",
+    "borderColor": "#036BC6",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000015",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "International Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "sessionType": "Academy Rugby"
+    }
+  },
+  {
+    "id": "9000016",
+    "title": "Match prep",
+    "start": "2025-03-12T10:00:00",
+    "end": "2025-03-12T12:00:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000016",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "1st team",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000017",
+    "title": "KL - With Attach",
+    "start": "2025-03-12T13:00:00",
+    "end": "2025-03-12T13:45:00",
+    "backgroundColor": "#9b58b5",
+    "borderColor": "#9b58b5",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000017",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "International Squad",
+      "location": "Testing Facility",
+      "coach": "Kitman Labs",
+      "sessionType": "Catapult",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000018",
+    "title": "Strength & conditioning",
+    "start": "2025-03-20T15:00:00",
+    "end": "2025-03-20T16:30:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000018",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "1st team",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000019",
+    "title": "Individual session",
+    "start": "2025-03-20T08:00:00",
+    "end": "2025-03-20T08:45:00",
+    "backgroundColor": "#29AE61",
+    "borderColor": "#29AE61",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000019",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "Academy Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "sessionType": "Agility"
+    }
+  },
+  {
+    "id": "9000020",
+    "title": "Friendly match",
+    "start": "2025-03-26T16:00:00",
+    "end": "2025-03-26T17:00:00",
+    "backgroundColor": "#E62020",
+    "borderColor": "#E62020",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000020",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "1st team",
+      "location": "Training Field",
+      "coach": "Kitman Labs",
+      "sessionType": "Agility",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000021",
+    "title": "Repeated event",
+    "start": "2025-03-30T09:00:00",
+    "end": "2025-03-30T09:45:00",
+    "backgroundColor": "#01205D",
+    "borderColor": "#01205D",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000021",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "Academy Squad",
+      "location": "Testing Facility",
+      "coach": "Kitman Labs",
+      "sessionType": "Speed",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000022",
+    "title": "Repeated event",
+    "start": "2025-04-09T09:00:00",
+    "end": "2025-04-09T10:00:00",
+    "backgroundColor": "#036BC6",
+    "borderColor": "#036BC6",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000022",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "International Squad",
+      "location": "Testing Facility",
+      "coach": "Kitman Labs",
+      "sessionType": "Catapult",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000023",
+    "title": "Repeated event",
+    "start": "2025-04-09T14:00:00",
+    "end": "2025-04-09T14:45:00",
+    "backgroundColor": "#E62020",
+    "borderColor": "#E62020",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000023",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "Academy Squad",
+      "location": "Training Field",
+      "coach": "Kitman Labs",
+      "sessionType": "Catapult",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000024",
+    "title": "vs Cork - Kitman Series",
+    "start": "2025-04-13T07:00:00",
+    "end": "2025-04-13T08:30:00",
+    "backgroundColor": "#C0392B",
+    "borderColor": "#C0392B",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000024",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "1st team",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "Dublin",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000025",
+    "title": "Individual session",
+    "start": "2025-04-21T16:00:00",
+    "end": "2025-04-21T16:45:00",
+    "backgroundColor": "#036BC6",
+    "borderColor": "#036BC6",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000025",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "1st team",
+      "location": "Main Facility",
+      "coach": "Kitman Labs",
+      "sessionType": "Club Training"
+    }
+  },
+  {
+    "id": "9000026",
+    "title": "Friendly match",
+    "start": "2025-04-22T11:00:00",
+    "end": "2025-04-22T12:30:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000026",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "International Squad",
+      "location": "Neutral",
+      "coach": "Kitman Labs",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000027",
+    "title": "Team training",
+    "start": "2025-04-27T08:00:00",
+    "end": "2025-04-27T10:00:00",
+    "backgroundColor": "#036BC6",
+    "borderColor": "#036BC6",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000027",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "International Squad",
+      "location": "Testing Facility",
+      "coach": "Kitman Labs",
+      "sessionType": "Catapult",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000028",
+    "title": "Squad session",
+    "start": "2025-05-01T16:00:00",
+    "end": "2025-05-01T18:00:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000028",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "1st team",
+      "location": "Neutral",
+      "coach": "Kitman Labs",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000029",
+    "title": "Individual session",
+    "start": "2025-05-06T16:00:00",
+    "end": "2025-05-06T17:30:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000029",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "International Squad",
+      "location": "Home",
+      "coach": "Kitman Labs"
+    }
+  },
+  {
+    "id": "9000030",
+    "title": "Repeated event",
+    "start": "2025-05-07T13:00:00",
+    "end": "2025-05-07T14:00:00",
+    "backgroundColor": "#29AE61",
+    "borderColor": "#29AE61",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000030",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "1st team",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "sessionType": "Player Maker",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000031",
+    "title": "Match prep",
+    "start": "2025-05-11T09:00:00",
+    "end": "2025-05-11T11:00:00",
+    "backgroundColor": "#036BC6",
+    "borderColor": "#036BC6",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000031",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "Academy Squad",
+      "location": "Training Field",
+      "coach": "Kitman Labs",
+      "sessionType": "Speed",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000032",
+    "title": "Tactical session",
+    "start": "2025-05-20T07:00:00",
+    "end": "2025-05-20T08:00:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000032",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "1st team",
+      "location": "Home",
+      "coach": "Kitman Labs"
+    }
+  },
+  {
+    "id": "9000033",
+    "title": "Squad session",
+    "start": "2025-05-22T07:00:00",
+    "end": "2025-05-22T07:45:00",
+    "backgroundColor": "#01205D",
+    "borderColor": "#01205D",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000033",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "International Squad",
+      "location": "Testing Facility",
+      "coach": "Kitman Labs",
+      "sessionType": "Rehab",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000034",
+    "title": "KL - With Attach",
+    "start": "2025-05-29T07:00:00",
+    "end": "2025-05-29T08:00:00",
+    "backgroundColor": "#036BC6",
+    "borderColor": "#036BC6",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000034",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "Academy Squad",
+      "location": "Training Field",
+      "coach": "Kitman Labs",
+      "sessionType": "Rehab",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000035",
+    "title": "Individual session",
+    "start": "2025-05-26T11:00:00",
+    "end": "2025-05-26T12:30:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000035",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "1st team",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000036",
+    "title": "Friendly match",
+    "start": "2025-06-04T11:00:00",
+    "end": "2025-06-04T12:30:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000036",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "International Squad",
+      "location": "Main Facility",
+      "coach": "Kitman Labs",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000037",
+    "title": "Friendly match",
+    "start": "2025-06-08T13:00:00",
+    "end": "2025-06-08T14:00:00",
+    "backgroundColor": "#01205D",
+    "borderColor": "#01205D",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000037",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "International Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "sessionType": "Speed",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000038",
+    "title": "Strength & conditioning",
+    "start": "2025-06-12T14:00:00",
+    "end": "2025-06-12T15:30:00",
+    "backgroundColor": "#036BC6",
+    "borderColor": "#036BC6",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000038",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "International Squad",
+      "location": "Training Field",
+      "coach": "Kitman Labs",
+      "sessionType": "Workout",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000039",
+    "title": "vs New Zealand - Kitman Series",
+    "start": "2025-06-16T12:00:00",
+    "end": "2025-06-16T12:45:00",
+    "backgroundColor": "#C0392B",
+    "borderColor": "#C0392B",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000039",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "1st team",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "Cork",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000040",
+    "title": "vs Cork - Kitman Series",
+    "start": "2025-06-23T16:00:00",
+    "end": "2025-06-23T17:00:00",
+    "backgroundColor": "#B134C1",
+    "borderColor": "#B134C1",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000040",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "Academy Squad",
+      "location": "Away",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "Galway",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000041",
+    "title": "Tactical session",
+    "start": "2025-06-25T16:00:00",
+    "end": "2025-06-25T18:00:00",
+    "backgroundColor": "#E62020",
+    "borderColor": "#E62020",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000041",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "Academy Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "sessionType": "Speed",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000042",
+    "title": "vs New Zealand - Kitman Series",
+    "start": "2025-07-03T15:00:00",
+    "end": "2025-07-03T17:00:00",
+    "backgroundColor": "#C0392B",
+    "borderColor": "#C0392B",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000042",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "1st team",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "Samoa"
+    }
+  },
+  {
+    "id": "9000043",
+    "title": "Strength & conditioning",
+    "start": "2025-07-03T16:00:00",
+    "end": "2025-07-03T17:30:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000043",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "1st team",
+      "location": "Neutral",
+      "coach": "Kitman Labs"
+    }
+  },
+  {
+    "id": "9000044",
+    "title": "Tactical session",
+    "start": "2025-07-08T15:00:00",
+    "end": "2025-07-08T16:00:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000044",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "International Squad",
+      "location": "Neutral",
+      "coach": "Kitman Labs"
+    }
+  },
+  {
+    "id": "9000045",
+    "title": "Repeated event",
+    "start": "2025-07-08T14:00:00",
+    "end": "2025-07-08T15:30:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000045",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "1st team",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000046",
+    "title": "Repeated event",
+    "start": "2025-07-16T13:00:00",
+    "end": "2025-07-16T13:45:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000046",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "International Squad",
+      "location": "Home",
+      "coach": "Kitman Labs"
+    }
+  },
+  {
+    "id": "9000047",
+    "title": "vs Dublin - Kitman Series",
+    "start": "2025-07-17T12:00:00",
+    "end": "2025-07-17T13:30:00",
+    "backgroundColor": "#C0392B",
+    "borderColor": "#C0392B",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000047",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "International Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "Samoa",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000048",
+    "title": "Match prep",
+    "start": "2025-07-21T11:00:00",
+    "end": "2025-07-21T12:00:00",
+    "backgroundColor": "#29AE61",
+    "borderColor": "#29AE61",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000048",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "1st team",
+      "location": "Away",
+      "coach": "Kitman Labs",
+      "sessionType": "Club Training"
+    }
+  },
+  {
+    "id": "9000049",
+    "title": "Kitman Series",
+    "start": "2025-07-24T08:00:00",
+    "end": "2025-07-24T08:45:00",
+    "backgroundColor": "#01205D",
+    "borderColor": "#01205D",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000049",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "International Squad",
+      "location": "Testing Facility",
+      "coach": "Kitman Labs",
+      "sessionType": "Catapult",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000050",
+    "title": "Strength & conditioning",
+    "start": "2025-07-27T10:00:00",
+    "end": "2025-07-27T12:00:00",
+    "backgroundColor": "#01205D",
+    "borderColor": "#01205D",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000050",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "Academy Squad",
+      "location": "Training Field",
+      "coach": "Kitman Labs",
+      "sessionType": "Speed"
+    }
+  },
+  {
+    "id": "9000051",
+    "title": "Match prep",
+    "start": "2025-08-03T09:00:00",
+    "end": "2025-08-03T09:45:00",
+    "backgroundColor": "#01205D",
+    "borderColor": "#01205D",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000051",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "International Squad",
+      "location": "Training Field",
+      "coach": "Kitman Labs",
+      "sessionType": "Speed",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000052",
+    "title": "Friendly match",
+    "start": "2025-08-10T08:00:00",
+    "end": "2025-08-10T08:45:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000052",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "International Squad",
+      "location": "Main Facility",
+      "coach": "Kitman Labs"
+    }
+  },
+  {
+    "id": "9000053",
+    "title": "Repeated event",
+    "start": "2025-08-11T08:00:00",
+    "end": "2025-08-11T08:45:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000053",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "1st team",
+      "location": "Neutral",
+      "coach": "Kitman Labs"
+    }
+  },
+  {
+    "id": "9000054",
+    "title": "Kitman Series",
+    "start": "2025-08-17T07:00:00",
+    "end": "2025-08-17T08:00:00",
+    "backgroundColor": "#9b58b5",
+    "borderColor": "#9b58b5",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000054",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "International Squad",
+      "location": "Testing Facility",
+      "coach": "Kitman Labs",
+      "sessionType": "Speed",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000055",
+    "title": "vs Samoa - Kitman Series",
+    "start": "2025-08-18T07:00:00",
+    "end": "2025-08-18T08:00:00",
+    "backgroundColor": "#B134C1",
+    "borderColor": "#B134C1",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000055",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "International Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "Galway",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000056",
+    "title": "vs Galway - Kitman Series",
+    "start": "2025-08-24T16:00:00",
+    "end": "2025-08-24T18:00:00",
+    "backgroundColor": "#B134C1",
+    "borderColor": "#B134C1",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000056",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "Academy Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "Samoa"
+    }
+  },
+  {
+    "id": "9000057",
+    "title": "vs Australia - Kitman Series",
+    "start": "2025-08-31T11:00:00",
+    "end": "2025-08-31T11:45:00",
+    "backgroundColor": "#C0392B",
+    "borderColor": "#C0392B",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000057",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "1st team",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "Australia",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000058",
+    "title": "Strength & conditioning",
+    "start": "2025-09-09T10:00:00",
+    "end": "2025-09-09T11:00:00",
+    "backgroundColor": "#01205D",
+    "borderColor": "#01205D",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000058",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "Academy Squad",
+      "location": "Testing Facility",
+      "coach": "Kitman Labs",
+      "sessionType": "Catapult"
+    }
+  },
+  {
+    "id": "9000059",
+    "title": "vs Cork - Kitman Series",
+    "start": "2025-09-08T08:00:00",
+    "end": "2025-09-08T09:00:00",
+    "backgroundColor": "#C0392B",
+    "borderColor": "#C0392B",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000059",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "International Squad",
+      "location": "Neutral",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "New Zealand",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000060",
+    "title": "vs Samoa - Kitman Series",
+    "start": "2025-09-18T16:00:00",
+    "end": "2025-09-18T16:45:00",
+    "backgroundColor": "#B134C1",
+    "borderColor": "#B134C1",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000060",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "International Squad",
+      "location": "Neutral",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "Galway",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000061",
+    "title": "vs Dublin - Kitman Series",
+    "start": "2025-09-25T14:00:00",
+    "end": "2025-09-25T14:45:00",
+    "backgroundColor": "#B134C1",
+    "borderColor": "#B134C1",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000061",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "1st team",
+      "location": "Away",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "Australia",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000062",
+    "title": "vs New Zealand - Kitman Series",
+    "start": "2025-09-30T10:00:00",
+    "end": "2025-09-30T10:45:00",
+    "backgroundColor": "#B134C1",
+    "borderColor": "#B134C1",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000062",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "International Squad",
+      "location": "Away",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "Dublin",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000063",
+    "title": "KL",
+    "start": "2025-10-07T08:00:00",
+    "end": "2025-10-07T09:00:00",
+    "backgroundColor": "#036BC6",
+    "borderColor": "#036BC6",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000063",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "International Squad",
+      "location": "Testing Facility",
+      "coach": "Kitman Labs",
+      "sessionType": "Speed",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000064",
+    "title": "Repeated event",
+    "start": "2025-10-13T08:00:00",
+    "end": "2025-10-13T10:00:00",
+    "backgroundColor": "#01205D",
+    "borderColor": "#01205D",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000064",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "Academy Squad",
+      "location": "Testing Facility",
+      "coach": "Kitman Labs",
+      "sessionType": "Speed",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000065",
+    "title": "Repeated event",
+    "start": "2025-10-21T14:00:00",
+    "end": "2025-10-21T16:00:00",
+    "backgroundColor": "#01205D",
+    "borderColor": "#01205D",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000065",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "International Squad",
+      "location": "Training Field",
+      "coach": "Kitman Labs",
+      "sessionType": "Speed",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000066",
+    "title": "vs Cork - Kitman Series",
+    "start": "2025-10-21T15:00:00",
+    "end": "2025-10-21T16:00:00",
+    "backgroundColor": "#C0392B",
+    "borderColor": "#C0392B",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000066",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "1st team",
+      "location": "Away",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "New Zealand",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000067",
+    "title": "Repeated event",
+    "start": "2025-10-29T17:00:00",
+    "end": "2025-10-29T18:30:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000067",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "International Squad",
+      "location": "Home",
+      "coach": "Kitman Labs"
+    }
+  },
+  {
+    "id": "9000068",
+    "title": "Kitman Series",
+    "start": "2025-10-29T14:00:00",
+    "end": "2025-10-29T15:00:00",
+    "backgroundColor": "#29AE61",
+    "borderColor": "#29AE61",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000068",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "Academy Squad",
+      "location": "Away",
+      "coach": "Kitman Labs",
+      "sessionType": "Player Maker",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000069",
+    "title": "Repeated event",
+    "start": "2025-11-05T08:00:00",
+    "end": "2025-11-05T09:00:00",
+    "backgroundColor": "#01205D",
+    "borderColor": "#01205D",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000069",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "International Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "sessionType": "Rehab"
+    }
+  },
+  {
+    "id": "9000070",
+    "title": "vs Galway - Kitman Series",
+    "start": "2025-11-06T14:00:00",
+    "end": "2025-11-06T15:00:00",
+    "backgroundColor": "#B134C1",
+    "borderColor": "#B134C1",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000070",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "1st team",
+      "location": "Neutral",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "New Zealand",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000071",
+    "title": "Friendly match",
+    "start": "2025-11-12T12:00:00",
+    "end": "2025-11-12T13:30:00",
+    "backgroundColor": "#9b58b5",
+    "borderColor": "#9b58b5",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000071",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "International Squad",
+      "location": "Training Field",
+      "coach": "Kitman Labs",
+      "sessionType": "Catapult"
+    }
+  },
+  {
+    "id": "9000072",
+    "title": "Tactical session",
+    "start": "2025-11-13T08:00:00",
+    "end": "2025-11-13T10:00:00",
+    "backgroundColor": "#01205D",
+    "borderColor": "#01205D",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000072",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "Academy Squad",
+      "location": "Training Field",
+      "coach": "Kitman Labs",
+      "sessionType": "Rehab",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000073",
+    "title": "vs New Zealand - Kitman Series",
+    "start": "2025-11-18T15:00:00",
+    "end": "2025-11-18T17:00:00",
+    "backgroundColor": "#C0392B",
+    "borderColor": "#C0392B",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000073",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "Academy Squad",
+      "location": "Neutral",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "Samoa",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000074",
+    "title": "vs Dublin - Kitman Series",
+    "start": "2025-11-20T08:00:00",
+    "end": "2025-11-20T09:00:00",
+    "backgroundColor": "#B134C1",
+    "borderColor": "#B134C1",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000074",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "1st team",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "New Zealand",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000075",
+    "title": "vs Australia - Kitman Series",
+    "start": "2025-11-27T16:00:00",
+    "end": "2025-11-27T17:00:00",
+    "backgroundColor": "#B134C1",
+    "borderColor": "#B134C1",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000075",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "International Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "Cork"
+    }
+  },
+  {
+    "id": "9000076",
+    "title": "vs Australia - Kitman Series",
+    "start": "2025-11-25T10:00:00",
+    "end": "2025-11-25T10:45:00",
+    "backgroundColor": "#B134C1",
+    "borderColor": "#B134C1",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000076",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "1st team",
+      "location": "Away",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "New Zealand",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000077",
+    "title": "Team training",
+    "start": "2025-12-03T13:00:00",
+    "end": "2025-12-03T14:00:00",
+    "backgroundColor": "#29AE61",
+    "borderColor": "#29AE61",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000077",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "1st team",
+      "location": "Away",
+      "coach": "Kitman Labs",
+      "sessionType": "Agility"
+    }
+  },
+  {
+    "id": "9000078",
+    "title": "Match prep",
+    "start": "2025-12-07T12:00:00",
+    "end": "2025-12-07T14:00:00",
+    "backgroundColor": "#036BC6",
+    "borderColor": "#036BC6",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000078",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "International Squad",
+      "location": "Testing Facility",
+      "coach": "Kitman Labs",
+      "sessionType": "Catapult",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000079",
+    "title": "Recovery session",
+    "start": "2025-12-10T08:00:00",
+    "end": "2025-12-10T10:00:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000079",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "1st team",
+      "location": "Neutral",
+      "coach": "Kitman Labs",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000080",
+    "title": "Squad session",
+    "start": "2025-12-15T13:00:00",
+    "end": "2025-12-15T13:45:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000080",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "1st team",
+      "location": "Neutral",
+      "coach": "Kitman Labs"
+    }
+  },
+  {
+    "id": "9000081",
+    "title": "Team training",
+    "start": "2025-12-17T12:00:00",
+    "end": "2025-12-17T14:00:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000081",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "International Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000082",
+    "title": "Individual session",
+    "start": "2025-12-21T17:00:00",
+    "end": "2025-12-21T18:30:00",
+    "backgroundColor": "#9b58b5",
+    "borderColor": "#9b58b5",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000082",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "Academy Squad",
+      "location": "Testing Facility",
+      "coach": "Kitman Labs",
+      "sessionType": "Rehab",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000083",
+    "title": "Recovery session",
+    "start": "2025-12-28T17:00:00",
+    "end": "2025-12-28T19:00:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000083",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "1st team",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000084",
+    "title": "vs Samoa - Kitman Series",
+    "start": "2025-12-28T15:00:00",
+    "end": "2025-12-28T16:30:00",
+    "backgroundColor": "#C0392B",
+    "borderColor": "#C0392B",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000084",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "1st team",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "Australia",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000085",
+    "title": "Repeated event",
+    "start": "2026-01-05T17:00:00",
+    "end": "2026-01-05T18:30:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000085",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "1st team",
+      "location": "Main Facility",
+      "coach": "Kitman Labs",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000086",
+    "title": "Strength & conditioning",
+    "start": "2026-01-07T10:00:00",
+    "end": "2026-01-07T11:30:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000086",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "1st team",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000087",
+    "title": "Squad session",
+    "start": "2026-01-12T08:00:00",
+    "end": "2026-01-12T08:45:00",
+    "backgroundColor": "#036BC6",
+    "borderColor": "#036BC6",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000087",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "Academy Squad",
+      "location": "Away",
+      "coach": "Kitman Labs",
+      "sessionType": "Club Training",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000088",
+    "title": "Strength & conditioning",
+    "start": "2026-01-21T09:00:00",
+    "end": "2026-01-21T10:30:00",
+    "backgroundColor": "#E62020",
+    "borderColor": "#E62020",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000088",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "1st team",
+      "location": "Away",
+      "coach": "Kitman Labs",
+      "sessionType": "Agility"
+    }
+  },
+  {
+    "id": "9000089",
+    "title": "Individual session",
+    "start": "2026-01-19T12:00:00",
+    "end": "2026-01-19T13:00:00",
+    "backgroundColor": "#E62020",
+    "borderColor": "#E62020",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000089",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "International Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "sessionType": "Rehab",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000090",
+    "title": "Kitman Series",
+    "start": "2026-01-26T13:00:00",
+    "end": "2026-01-26T15:00:00",
+    "backgroundColor": "#29AE61",
+    "borderColor": "#29AE61",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000090",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "International Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "sessionType": "Speed"
+    }
+  },
+  {
+    "id": "9000091",
+    "title": "vs Australia - Kitman Series",
+    "start": "2026-02-02T08:00:00",
+    "end": "2026-02-02T08:45:00",
+    "backgroundColor": "#C0392B",
+    "borderColor": "#C0392B",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000091",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "International Squad",
+      "location": "Neutral",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "Dublin",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000092",
+    "title": "Recovery session",
+    "start": "2026-02-02T11:00:00",
+    "end": "2026-02-02T11:45:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000092",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "1st team",
+      "location": "Away",
+      "coach": "Kitman Labs",
+      "sessionType": "Speed",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000093",
+    "title": "Kitman Series",
+    "start": "2026-02-11T16:00:00",
+    "end": "2026-02-11T17:30:00",
+    "backgroundColor": "#E62020",
+    "borderColor": "#E62020",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000093",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "Academy Squad",
+      "location": "Training Field",
+      "coach": "Kitman Labs",
+      "sessionType": "Agility",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000094",
+    "title": "Team training",
+    "start": "2026-02-17T11:00:00",
+    "end": "2026-02-17T13:00:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000094",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "International Squad",
+      "location": "Neutral",
+      "coach": "Kitman Labs",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000095",
+    "title": "Kitman Series",
+    "start": "2026-02-22T09:00:00",
+    "end": "2026-02-22T09:45:00",
+    "backgroundColor": "#E62020",
+    "borderColor": "#E62020",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000095",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "Academy Squad",
+      "location": "Away",
+      "coach": "Kitman Labs",
+      "sessionType": "Workout",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000096",
+    "title": "Strength & conditioning",
+    "start": "2026-02-24T09:00:00",
+    "end": "2026-02-24T10:00:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000096",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "Academy Squad",
+      "location": "Main Facility",
+      "coach": "Kitman Labs",
+      "sessionType": "Club Training"
+    }
+  },
+  {
+    "id": "9000097",
+    "title": "Squad session",
+    "start": "2026-03-03T12:00:00",
+    "end": "2026-03-03T14:00:00",
+    "backgroundColor": "#036BC6",
+    "borderColor": "#036BC6",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000097",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "International Squad",
+      "location": "Testing Facility",
+      "coach": "Kitman Labs",
+      "sessionType": "Speed",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000098",
+    "title": "Individual session",
+    "start": "2026-03-02T09:00:00",
+    "end": "2026-03-02T10:00:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000098",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "International Squad",
+      "location": "Neutral",
+      "coach": "Kitman Labs",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000099",
+    "title": "Squad session",
+    "start": "2026-03-08T13:00:00",
+    "end": "2026-03-08T15:00:00",
+    "backgroundColor": "#9b58b5",
+    "borderColor": "#9b58b5",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000099",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "International Squad",
+      "location": "Testing Facility",
+      "coach": "Kitman Labs",
+      "sessionType": "Rehab"
+    }
+  },
+  {
+    "id": "9000100",
+    "title": "vs Samoa - Kitman Series",
+    "start": "2026-03-08T14:00:00",
+    "end": "2026-03-08T14:45:00",
+    "backgroundColor": "#C0392B",
+    "borderColor": "#C0392B",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000100",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "1st team",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "Australia"
+    }
+  },
+  {
+    "id": "9000101",
+    "title": "Team training",
+    "start": "2026-03-19T16:00:00",
+    "end": "2026-03-19T17:00:00",
+    "backgroundColor": "#01205D",
+    "borderColor": "#01205D",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000101",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "International Squad",
+      "location": "Testing Facility",
+      "coach": "Kitman Labs",
+      "sessionType": "Rehab",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000102",
+    "title": "Squad session",
+    "start": "2026-03-24T09:00:00",
+    "end": "2026-03-24T09:45:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000102",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "1st team",
+      "location": "Away",
+      "coach": "Kitman Labs",
+      "sessionType": "Agility",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000103",
+    "title": "KL",
+    "start": "2026-03-24T10:00:00",
+    "end": "2026-03-24T11:00:00",
+    "backgroundColor": "#9b58b5",
+    "borderColor": "#9b58b5",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000103",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "International Squad",
+      "location": "Training Field",
+      "coach": "Kitman Labs",
+      "sessionType": "Speed",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000104",
+    "title": "Match prep",
+    "start": "2026-04-02T12:00:00",
+    "end": "2026-04-02T13:30:00",
+    "backgroundColor": "#9b58b5",
+    "borderColor": "#9b58b5",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000104",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "International Squad",
+      "location": "Testing Facility",
+      "coach": "Kitman Labs",
+      "sessionType": "Catapult",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000105",
+    "title": "Team training",
+    "start": "2026-04-09T11:00:00",
+    "end": "2026-04-09T13:00:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000105",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "1st team",
+      "location": "Main Facility",
+      "coach": "Kitman Labs",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000106",
+    "title": "Friendly match",
+    "start": "2026-04-15T11:00:00",
+    "end": "2026-04-15T11:45:00",
+    "backgroundColor": "#9b58b5",
+    "borderColor": "#9b58b5",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000106",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "Academy Squad",
+      "location": "Training Field",
+      "coach": "Kitman Labs",
+      "sessionType": "Catapult",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000107",
+    "title": "Kitman Series",
+    "start": "2026-04-23T10:00:00",
+    "end": "2026-04-23T11:30:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000107",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "Academy Squad",
+      "location": "Away",
+      "coach": "Kitman Labs",
+      "sessionType": "Workout",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000108",
+    "title": "Friendly match",
+    "start": "2026-04-19T15:00:00",
+    "end": "2026-04-19T17:00:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000108",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "International Squad",
+      "location": "Away",
+      "coach": "Kitman Labs",
+      "sessionType": "Player Maker",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000109",
+    "title": "Squad session",
+    "start": "2026-04-28T16:00:00",
+    "end": "2026-04-28T17:30:00",
+    "backgroundColor": "#01205D",
+    "borderColor": "#01205D",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000109",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "International Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "sessionType": "Catapult",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000110",
+    "title": "Tactical session",
+    "start": "2026-04-29T13:00:00",
+    "end": "2026-04-29T13:45:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000110",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "International Squad",
+      "location": "Main Facility",
+      "coach": "Kitman Labs"
+    }
+  },
+  {
+    "id": "9000111",
+    "title": "vs Galway - Kitman Series",
+    "start": "2026-05-06T12:00:00",
+    "end": "2026-05-06T13:00:00",
+    "backgroundColor": "#C0392B",
+    "borderColor": "#C0392B",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000111",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "1st team",
+      "location": "Neutral",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "Cork",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000112",
+    "title": "Match prep",
+    "start": "2026-05-04T10:00:00",
+    "end": "2026-05-04T11:30:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000112",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "1st team",
+      "location": "Main Facility",
+      "coach": "Kitman Labs"
+    }
+  },
+  {
+    "id": "9000113",
+    "title": "Repeated event",
+    "start": "2026-05-10T09:00:00",
+    "end": "2026-05-10T10:00:00",
+    "backgroundColor": "#036BC6",
+    "borderColor": "#036BC6",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000113",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "International Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "sessionType": "Player Maker",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000114",
+    "title": "vs Dublin - Kitman Series",
+    "start": "2026-05-12T15:00:00",
+    "end": "2026-05-12T16:00:00",
+    "backgroundColor": "#C0392B",
+    "borderColor": "#C0392B",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000114",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "International Squad",
+      "location": "Away",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "Dublin"
+    }
+  },
+  {
+    "id": "9000115",
+    "title": "Squad session",
+    "start": "2026-05-21T14:00:00",
+    "end": "2026-05-21T16:00:00",
+    "backgroundColor": "#29AE61",
+    "borderColor": "#29AE61",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000115",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "1st team",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "sessionType": "Club Training",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000116",
+    "title": "KL",
+    "start": "2026-05-25T09:00:00",
+    "end": "2026-05-25T10:30:00",
+    "backgroundColor": "#01205D",
+    "borderColor": "#01205D",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000116",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "Academy Squad",
+      "location": "Training Field",
+      "coach": "Kitman Labs",
+      "sessionType": "Catapult",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000117",
+    "title": "vs Cork - Kitman Series",
+    "start": "2026-05-26T14:00:00",
+    "end": "2026-05-26T14:45:00",
+    "backgroundColor": "#B134C1",
+    "borderColor": "#B134C1",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000117",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "1st team",
+      "location": "Away",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "Galway",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000118",
+    "title": "KL",
+    "start": "2026-06-01T13:00:00",
+    "end": "2026-06-01T14:30:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000118",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "1st team",
+      "location": "Home",
+      "coach": "Kitman Labs"
+    }
+  },
+  {
+    "id": "9000119",
+    "title": "Strength & conditioning",
+    "start": "2026-06-08T13:00:00",
+    "end": "2026-06-08T14:00:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000119",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "Academy Squad",
+      "location": "Away",
+      "coach": "Kitman Labs",
+      "sessionType": "Catapult",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000120",
+    "title": "vs Samoa - Kitman Series",
+    "start": "2026-06-17T07:00:00",
+    "end": "2026-06-17T08:00:00",
+    "backgroundColor": "#C0392B",
+    "borderColor": "#C0392B",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000120",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "Academy Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "Cork"
+    }
+  },
+  {
+    "id": "9000121",
+    "title": "Kitman Series",
+    "start": "2026-06-24T07:00:00",
+    "end": "2026-06-24T07:45:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000121",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "International Squad",
+      "location": "Training Field",
+      "coach": "Kitman Labs",
+      "sessionType": "Academy Rugby",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000122",
+    "title": "Match prep",
+    "start": "2026-06-22T07:00:00",
+    "end": "2026-06-22T08:30:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000122",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "International Squad",
+      "location": "Home",
+      "coach": "Kitman Labs"
+    }
+  },
+  {
+    "id": "9000123",
+    "title": "vs Galway - Kitman Series",
+    "start": "2026-06-29T12:00:00",
+    "end": "2026-06-29T13:00:00",
+    "backgroundColor": "#C0392B",
+    "borderColor": "#C0392B",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000123",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "International Squad",
+      "location": "Neutral",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "Samoa"
+    }
+  },
+  {
+    "id": "9000124",
+    "title": "Tactical session",
+    "start": "2026-07-01T08:00:00",
+    "end": "2026-07-01T10:00:00",
+    "backgroundColor": "#29AE61",
+    "borderColor": "#29AE61",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000124",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "International Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "sessionType": "Academy Rugby",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000125",
+    "title": "Strength & conditioning",
+    "start": "2026-07-06T15:00:00",
+    "end": "2026-07-06T16:30:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000125",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "International Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000126",
+    "title": "Kitman Series",
+    "start": "2026-07-16T08:00:00",
+    "end": "2026-07-16T09:30:00",
+    "backgroundColor": "#036BC6",
+    "borderColor": "#036BC6",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000126",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "International Squad",
+      "location": "Main Facility",
+      "coach": "Kitman Labs",
+      "sessionType": "Player Maker",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000127",
+    "title": "vs New Zealand - Kitman Series",
+    "start": "2026-07-19T10:00:00",
+    "end": "2026-07-19T11:30:00",
+    "backgroundColor": "#B134C1",
+    "borderColor": "#B134C1",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000127",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "International Squad",
+      "location": "Away",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "Australia",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000128",
+    "title": "Team training",
+    "start": "2026-07-23T07:00:00",
+    "end": "2026-07-23T08:30:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000128",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "1st team",
+      "location": "Away",
+      "coach": "Kitman Labs",
+      "sessionType": "Agility",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000129",
+    "title": "vs Samoa - Kitman Series",
+    "start": "2026-07-26T14:00:00",
+    "end": "2026-07-26T15:00:00",
+    "backgroundColor": "#B134C1",
+    "borderColor": "#B134C1",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000129",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "Academy Squad",
+      "location": "Away",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "Cork",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000130",
+    "title": "KL",
+    "start": "2026-08-03T13:00:00",
+    "end": "2026-08-03T14:00:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000130",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "International Squad",
+      "location": "Main Facility",
+      "coach": "Kitman Labs",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000131",
+    "title": "Team training",
+    "start": "2026-08-03T13:00:00",
+    "end": "2026-08-03T15:00:00",
+    "backgroundColor": "#01205D",
+    "borderColor": "#01205D",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000131",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "International Squad",
+      "location": "Testing Facility",
+      "coach": "Kitman Labs",
+      "sessionType": "Catapult",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000132",
+    "title": "Team training",
+    "start": "2026-08-09T14:00:00",
+    "end": "2026-08-09T14:45:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000132",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "1st team",
+      "location": "Neutral",
+      "coach": "Kitman Labs",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000133",
+    "title": "Individual session",
+    "start": "2026-08-16T14:00:00",
+    "end": "2026-08-16T15:00:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000133",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "1st team",
+      "location": "Training Field",
+      "coach": "Kitman Labs",
+      "sessionType": "Workout",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000134",
+    "title": "KL",
+    "start": "2026-08-17T09:00:00",
+    "end": "2026-08-17T10:00:00",
+    "backgroundColor": "#29AE61",
+    "borderColor": "#29AE61",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000134",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "Academy Squad",
+      "location": "Main Facility",
+      "coach": "Kitman Labs",
+      "sessionType": "Catapult"
+    }
+  },
+  {
+    "id": "9000135",
+    "title": "vs Cork - Kitman Series",
+    "start": "2026-08-26T11:00:00",
+    "end": "2026-08-26T12:00:00",
+    "backgroundColor": "#C0392B",
+    "borderColor": "#C0392B",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000135",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "1st team",
+      "location": "Away",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "Galway",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000136",
+    "title": "Tactical session",
+    "start": "2026-08-30T10:00:00",
+    "end": "2026-08-30T12:00:00",
+    "backgroundColor": "#E62020",
+    "borderColor": "#E62020",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000136",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "1st team",
+      "location": "Away",
+      "coach": "Kitman Labs",
+      "sessionType": "Omegawave",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000137",
+    "title": "Match prep",
+    "start": "2026-09-09T08:00:00",
+    "end": "2026-09-09T08:45:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000137",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "1st team",
+      "location": "Main Facility",
+      "coach": "Kitman Labs",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000138",
+    "title": "Tactical session",
+    "start": "2026-09-08T07:00:00",
+    "end": "2026-09-08T08:00:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000138",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "1st team",
+      "location": "Neutral",
+      "coach": "Kitman Labs",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000139",
+    "title": "Match prep",
+    "start": "2026-09-13T10:00:00",
+    "end": "2026-09-13T11:30:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000139",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "International Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000140",
+    "title": "Kitman Series",
+    "start": "2026-09-21T12:00:00",
+    "end": "2026-09-21T13:30:00",
+    "backgroundColor": "#9b58b5",
+    "borderColor": "#9b58b5",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000140",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "Academy Squad",
+      "location": "Training Field",
+      "coach": "Kitman Labs",
+      "sessionType": "Catapult",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000141",
+    "title": "vs Cork - Kitman Series",
+    "start": "2026-09-20T10:00:00",
+    "end": "2026-09-20T11:30:00",
+    "backgroundColor": "#C0392B",
+    "borderColor": "#C0392B",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000141",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "Academy Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "Australia"
+    }
+  },
+  {
+    "id": "9000142",
+    "title": "KL",
+    "start": "2026-09-30T12:00:00",
+    "end": "2026-09-30T13:00:00",
+    "backgroundColor": "#036BC6",
+    "borderColor": "#036BC6",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000142",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "Academy Squad",
+      "location": "Training Field",
+      "coach": "Kitman Labs",
+      "sessionType": "Catapult",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000143",
+    "title": "Repeated event",
+    "start": "2026-09-28T13:00:00",
+    "end": "2026-09-28T13:45:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000143",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "International Squad",
+      "location": "Main Facility",
+      "coach": "Kitman Labs",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000144",
+    "title": "Kitman Series",
+    "start": "2026-10-06T13:00:00",
+    "end": "2026-10-06T13:45:00",
+    "backgroundColor": "#9b58b5",
+    "borderColor": "#9b58b5",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000144",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "Academy Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "sessionType": "Rehab",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000145",
+    "title": "Squad session",
+    "start": "2026-10-07T13:00:00",
+    "end": "2026-10-07T13:45:00",
+    "backgroundColor": "#9b58b5",
+    "borderColor": "#9b58b5",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000145",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "International Squad",
+      "location": "Training Field",
+      "coach": "Kitman Labs",
+      "sessionType": "Speed",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000146",
+    "title": "Kitman Series",
+    "start": "2026-10-15T15:00:00",
+    "end": "2026-10-15T16:30:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000146",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "International Squad",
+      "location": "Neutral",
+      "coach": "Kitman Labs",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000147",
+    "title": "Tactical session",
+    "start": "2026-10-15T14:00:00",
+    "end": "2026-10-15T15:00:00",
+    "backgroundColor": "#9b58b5",
+    "borderColor": "#9b58b5",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000147",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "Academy Squad",
+      "location": "Testing Facility",
+      "coach": "Kitman Labs",
+      "sessionType": "Rehab",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000148",
+    "title": "Individual session",
+    "start": "2026-10-21T13:00:00",
+    "end": "2026-10-21T14:00:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000148",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "1st team",
+      "location": "Neutral",
+      "coach": "Kitman Labs",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000149",
+    "title": "Kitman Series",
+    "start": "2026-10-19T12:00:00",
+    "end": "2026-10-19T12:45:00",
+    "backgroundColor": "#01205D",
+    "borderColor": "#01205D",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000149",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "International Squad",
+      "location": "Training Field",
+      "coach": "Kitman Labs",
+      "sessionType": "Speed",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000150",
+    "title": "vs Dublin - Kitman Series",
+    "start": "2026-10-25T11:00:00",
+    "end": "2026-10-25T11:45:00",
+    "backgroundColor": "#B134C1",
+    "borderColor": "#B134C1",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000150",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "International Squad",
+      "location": "Away",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "New Zealand",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000151",
+    "title": "KL",
+    "start": "2026-11-05T10:00:00",
+    "end": "2026-11-05T10:45:00",
+    "backgroundColor": "#E62020",
+    "borderColor": "#E62020",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000151",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "Academy Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "sessionType": "Player Maker",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000152",
+    "title": "KL",
+    "start": "2026-11-04T13:00:00",
+    "end": "2026-11-04T14:30:00",
+    "backgroundColor": "#E62020",
+    "borderColor": "#E62020",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000152",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "Academy Squad",
+      "location": "Main Facility",
+      "coach": "Kitman Labs",
+      "sessionType": "Agility",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000153",
+    "title": "vs Galway - Kitman Series",
+    "start": "2026-11-11T10:00:00",
+    "end": "2026-11-11T10:45:00",
+    "backgroundColor": "#B134C1",
+    "borderColor": "#B134C1",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000153",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "International Squad",
+      "location": "Away",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "Cork",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000154",
+    "title": "Recovery session",
+    "start": "2026-11-16T08:00:00",
+    "end": "2026-11-16T09:30:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000154",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "1st team",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000155",
+    "title": "Recovery session",
+    "start": "2026-11-23T09:00:00",
+    "end": "2026-11-23T10:30:00",
+    "backgroundColor": "#036BC6",
+    "borderColor": "#036BC6",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000155",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "International Squad",
+      "location": "Main Facility",
+      "coach": "Kitman Labs",
+      "sessionType": "Agility",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000156",
+    "title": "KL",
+    "start": "2026-11-29T13:00:00",
+    "end": "2026-11-29T15:00:00",
+    "backgroundColor": "#01205D",
+    "borderColor": "#01205D",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000156",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "International Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "sessionType": "Rehab",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000157",
+    "title": "vs Cork - Kitman Series",
+    "start": "2026-11-30T16:00:00",
+    "end": "2026-11-30T17:00:00",
+    "backgroundColor": "#B134C1",
+    "borderColor": "#B134C1",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000157",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "1st team",
+      "location": "Away",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "Australia"
+    }
+  },
+  {
+    "id": "9000158",
+    "title": "vs Dublin - Kitman Series",
+    "start": "2026-12-09T08:00:00",
+    "end": "2026-12-09T10:00:00",
+    "backgroundColor": "#C0392B",
+    "borderColor": "#C0392B",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000158",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "Academy Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "Dublin",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000159",
+    "title": "vs Samoa - Kitman Series",
+    "start": "2026-12-16T09:00:00",
+    "end": "2026-12-16T09:45:00",
+    "backgroundColor": "#C0392B",
+    "borderColor": "#C0392B",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000159",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "1st team",
+      "location": "Away",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "Galway"
+    }
+  },
+  {
+    "id": "9000160",
+    "title": "vs Australia - Kitman Series",
+    "start": "2026-12-16T15:00:00",
+    "end": "2026-12-16T16:30:00",
+    "backgroundColor": "#B134C1",
+    "borderColor": "#B134C1",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000160",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "International Squad",
+      "location": "Neutral",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "Australia",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000161",
+    "title": "Match prep",
+    "start": "2026-12-22T14:00:00",
+    "end": "2026-12-22T16:00:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000161",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "1st team",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "sessionType": "Agility"
+    }
+  },
+  {
+    "id": "9000162",
+    "title": "Repeated event",
+    "start": "2026-12-30T17:00:00",
+    "end": "2026-12-30T19:00:00",
+    "backgroundColor": "#01205D",
+    "borderColor": "#01205D",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000162",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "Academy Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "sessionType": "Rehab",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000163",
+    "title": "vs Australia - Kitman Series",
+    "start": "2026-12-29T10:00:00",
+    "end": "2026-12-29T11:30:00",
+    "backgroundColor": "#C0392B",
+    "borderColor": "#C0392B",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000163",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "International Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "Dublin"
+    }
+  },
+  {
+    "id": "9000164",
+    "title": "Friendly match",
+    "start": "2027-01-05T14:00:00",
+    "end": "2027-01-05T15:30:00",
+    "backgroundColor": "#036BC6",
+    "borderColor": "#036BC6",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000164",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "Academy Squad",
+      "location": "Away",
+      "coach": "Kitman Labs",
+      "sessionType": "Academy Rugby"
+    }
+  },
+  {
+    "id": "9000165",
+    "title": "KL - With Attach",
+    "start": "2027-01-10T12:00:00",
+    "end": "2027-01-10T12:45:00",
+    "backgroundColor": "#01205D",
+    "borderColor": "#01205D",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000165",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "International Squad",
+      "location": "Training Field",
+      "coach": "Kitman Labs",
+      "sessionType": "Rehab",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000166",
+    "title": "Squad session",
+    "start": "2027-01-17T15:00:00",
+    "end": "2027-01-17T16:30:00",
+    "backgroundColor": "#E62020",
+    "borderColor": "#E62020",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000166",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "Academy Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "sessionType": "Speed",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000167",
+    "title": "Recovery session",
+    "start": "2027-01-17T12:00:00",
+    "end": "2027-01-17T13:30:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000167",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "1st team",
+      "location": "Neutral",
+      "coach": "Kitman Labs",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000168",
+    "title": "Tactical session",
+    "start": "2027-01-24T09:00:00",
+    "end": "2027-01-24T10:00:00",
+    "backgroundColor": "#9b58b5",
+    "borderColor": "#9b58b5",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000168",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "Academy Squad",
+      "location": "Testing Facility",
+      "coach": "Kitman Labs",
+      "sessionType": "Speed"
+    }
+  },
+  {
+    "id": "9000169",
+    "title": "KL - With Attach",
+    "start": "2027-01-27T17:00:00",
+    "end": "2027-01-27T18:30:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000169",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "1st team",
+      "location": "Neutral",
+      "coach": "Kitman Labs",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000170",
+    "title": "Friendly match",
+    "start": "2027-02-03T08:00:00",
+    "end": "2027-02-03T09:00:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000170",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "1st team",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "sessionType": "Catapult",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000171",
+    "title": "Tactical session",
+    "start": "2027-02-08T12:00:00",
+    "end": "2027-02-08T14:00:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000171",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "1st team",
+      "location": "Main Facility",
+      "coach": "Kitman Labs",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000172",
+    "title": "Recovery session",
+    "start": "2027-02-07T10:00:00",
+    "end": "2027-02-07T11:30:00",
+    "backgroundColor": "#036BC6",
+    "borderColor": "#036BC6",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000172",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "International Squad",
+      "location": "Testing Facility",
+      "coach": "Kitman Labs",
+      "sessionType": "Speed",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000173",
+    "title": "vs Dublin - Kitman Series",
+    "start": "2027-02-17T13:00:00",
+    "end": "2027-02-17T14:30:00",
+    "backgroundColor": "#B134C1",
+    "borderColor": "#B134C1",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000173",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "1st team",
+      "location": "Neutral",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "Cork",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000174",
+    "title": "Individual session",
+    "start": "2027-02-15T12:00:00",
+    "end": "2027-02-15T13:30:00",
+    "backgroundColor": "#01205D",
+    "borderColor": "#01205D",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000174",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "International Squad",
+      "location": "Training Field",
+      "coach": "Kitman Labs",
+      "sessionType": "Catapult",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000175",
+    "title": "Recovery session",
+    "start": "2027-02-21T10:00:00",
+    "end": "2027-02-21T11:00:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000175",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "Academy Squad",
+      "location": "Away",
+      "coach": "Kitman Labs",
+      "sessionType": "Omegawave",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000176",
+    "title": "Strength & conditioning",
+    "start": "2027-02-25T10:00:00",
+    "end": "2027-02-25T11:30:00",
+    "backgroundColor": "#036BC6",
+    "borderColor": "#036BC6",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000176",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "Academy Squad",
+      "location": "Training Field",
+      "coach": "Kitman Labs",
+      "sessionType": "Catapult",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000177",
+    "title": "Strength & conditioning",
+    "start": "2027-03-01T09:00:00",
+    "end": "2027-03-01T11:00:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000177",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "1st team",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "sessionType": "Catapult"
+    }
+  },
+  {
+    "id": "9000178",
+    "title": "Kitman Series",
+    "start": "2027-03-11T09:00:00",
+    "end": "2027-03-11T10:30:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000178",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "1st team",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000179",
+    "title": "Repeated event",
+    "start": "2027-03-10T14:00:00",
+    "end": "2027-03-10T14:45:00",
+    "backgroundColor": "#036BC6",
+    "borderColor": "#036BC6",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000179",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "Academy Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "sessionType": "Speed",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000180",
+    "title": "Kitman Series",
+    "start": "2027-03-15T10:00:00",
+    "end": "2027-03-15T11:00:00",
+    "backgroundColor": "#E62020",
+    "borderColor": "#E62020",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000180",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "International Squad",
+      "location": "Away",
+      "coach": "Kitman Labs",
+      "sessionType": "Omegawave"
+    }
+  },
+  {
+    "id": "9000181",
+    "title": "KL",
+    "start": "2027-03-14T16:00:00",
+    "end": "2027-03-14T16:45:00",
+    "backgroundColor": "#29AE61",
+    "borderColor": "#29AE61",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000181",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "International Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "sessionType": "Catapult",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000182",
+    "title": "vs Dublin - Kitman Series",
+    "start": "2027-03-22T17:00:00",
+    "end": "2027-03-22T17:45:00",
+    "backgroundColor": "#B134C1",
+    "borderColor": "#B134C1",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000182",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "1st team",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "Galway",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000183",
+    "title": "Squad session",
+    "start": "2027-03-28T15:00:00",
+    "end": "2027-03-28T16:30:00",
+    "backgroundColor": "#9b58b5",
+    "borderColor": "#9b58b5",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000183",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "Academy Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "sessionType": "Catapult",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000184",
+    "title": "Friendly match",
+    "start": "2027-03-30T13:00:00",
+    "end": "2027-03-30T14:00:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000184",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "1st team",
+      "location": "Neutral",
+      "coach": "Kitman Labs",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000185",
+    "title": "Strength & conditioning",
+    "start": "2027-04-08T12:00:00",
+    "end": "2027-04-08T13:30:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000185",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "International Squad",
+      "location": "Main Facility",
+      "coach": "Kitman Labs"
+    }
+  },
+  {
+    "id": "9000186",
+    "title": "vs New Zealand - Kitman Series",
+    "start": "2027-04-12T13:00:00",
+    "end": "2027-04-12T15:00:00",
+    "backgroundColor": "#C0392B",
+    "borderColor": "#C0392B",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000186",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "International Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "Australia"
+    }
+  },
+  {
+    "id": "9000187",
+    "title": "Individual session",
+    "start": "2027-04-13T09:00:00",
+    "end": "2027-04-13T09:45:00",
+    "backgroundColor": "#036BC6",
+    "borderColor": "#036BC6",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000187",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "International Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "sessionType": "Rehab",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000188",
+    "title": "Repeated event",
+    "start": "2027-04-20T11:00:00",
+    "end": "2027-04-20T11:45:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000188",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "International Squad",
+      "location": "Main Facility",
+      "coach": "Kitman Labs"
+    }
+  },
+  {
+    "id": "9000189",
+    "title": "vs Australia - Kitman Series",
+    "start": "2027-04-27T08:00:00",
+    "end": "2027-04-27T08:45:00",
+    "backgroundColor": "#C0392B",
+    "borderColor": "#C0392B",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000189",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "International Squad",
+      "location": "Neutral",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "Cork",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000190",
+    "title": "Strength & conditioning",
+    "start": "2027-04-25T10:00:00",
+    "end": "2027-04-25T11:00:00",
+    "backgroundColor": "#9b58b5",
+    "borderColor": "#9b58b5",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000190",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "Academy Squad",
+      "location": "Training Field",
+      "coach": "Kitman Labs",
+      "sessionType": "Speed",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000191",
+    "title": "Repeated event",
+    "start": "2027-05-05T15:00:00",
+    "end": "2027-05-05T16:30:00",
+    "backgroundColor": "#29AE61",
+    "borderColor": "#29AE61",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000191",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "Academy Squad",
+      "location": "Main Facility",
+      "coach": "Kitman Labs",
+      "sessionType": "Academy Rugby",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000192",
+    "title": "Recovery session",
+    "start": "2027-05-04T08:00:00",
+    "end": "2027-05-04T09:30:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000192",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "International Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000193",
+    "title": "Friendly match",
+    "start": "2027-05-09T10:00:00",
+    "end": "2027-05-09T12:00:00",
+    "backgroundColor": "#E62020",
+    "borderColor": "#E62020",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000193",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "1st team",
+      "location": "Away",
+      "coach": "Kitman Labs",
+      "sessionType": "Workout",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000194",
+    "title": "Kitman Series",
+    "start": "2027-05-10T11:00:00",
+    "end": "2027-05-10T11:45:00",
+    "backgroundColor": "#9b58b5",
+    "borderColor": "#9b58b5",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000194",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "International Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "sessionType": "Catapult",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000195",
+    "title": "Repeated event",
+    "start": "2027-05-17T15:00:00",
+    "end": "2027-05-17T16:30:00",
+    "backgroundColor": "#036BC6",
+    "borderColor": "#036BC6",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000195",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "International Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "sessionType": "Workout"
+    }
+  },
+  {
+    "id": "9000196",
+    "title": "vs Dublin - Kitman Series",
+    "start": "2027-05-18T14:00:00",
+    "end": "2027-05-18T15:30:00",
+    "backgroundColor": "#B134C1",
+    "borderColor": "#B134C1",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000196",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "International Squad",
+      "location": "Away",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "Cork",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000197",
+    "title": "Tactical session",
+    "start": "2027-05-25T13:00:00",
+    "end": "2027-05-25T14:30:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000197",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "International Squad",
+      "location": "Main Facility",
+      "coach": "Kitman Labs",
+      "sessionType": "Rehab",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000198",
+    "title": "Repeated event",
+    "start": "2027-05-27T13:00:00",
+    "end": "2027-05-27T14:00:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000198",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "International Squad",
+      "location": "Main Facility",
+      "coach": "Kitman Labs",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000199",
+    "title": "Repeated event",
+    "start": "2027-06-02T11:00:00",
+    "end": "2027-06-02T12:30:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000199",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "International Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000200",
+    "title": "KL - With Attach",
+    "start": "2027-06-02T15:00:00",
+    "end": "2027-06-02T16:00:00",
+    "backgroundColor": "#036BC6",
+    "borderColor": "#036BC6",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000200",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "1st team",
+      "location": "Away",
+      "coach": "Kitman Labs",
+      "sessionType": "Player Maker",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000201",
+    "title": "KL - With Attach",
+    "start": "2027-06-07T12:00:00",
+    "end": "2027-06-07T14:00:00",
+    "backgroundColor": "#E62020",
+    "borderColor": "#E62020",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000201",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "Academy Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "sessionType": "Agility",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000202",
+    "title": "Individual session",
+    "start": "2027-06-16T09:00:00",
+    "end": "2027-06-16T09:45:00",
+    "backgroundColor": "#036BC6",
+    "borderColor": "#036BC6",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000202",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "International Squad",
+      "location": "Testing Facility",
+      "coach": "Kitman Labs",
+      "sessionType": "Rehab",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000203",
+    "title": "Squad session",
+    "start": "2027-06-23T14:00:00",
+    "end": "2027-06-23T14:45:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000203",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "International Squad",
+      "location": "Away",
+      "coach": "Kitman Labs",
+      "sessionType": "Omegawave",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000204",
+    "title": "Team training",
+    "start": "2027-06-29T07:00:00",
+    "end": "2027-06-29T07:45:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000204",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "International Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "sessionType": "Player Maker",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000205",
+    "title": "Kitman Series",
+    "start": "2027-06-29T13:00:00",
+    "end": "2027-06-29T15:00:00",
+    "backgroundColor": "#29AE61",
+    "borderColor": "#29AE61",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000205",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "1st team",
+      "location": "Training Field",
+      "coach": "Kitman Labs",
+      "sessionType": "Speed",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000206",
+    "title": "Friendly match",
+    "start": "2027-07-07T08:00:00",
+    "end": "2027-07-07T09:00:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000206",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "1st team",
+      "location": "Main Facility",
+      "coach": "Kitman Labs",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000207",
+    "title": "Recovery session",
+    "start": "2027-07-04T15:00:00",
+    "end": "2027-07-04T16:30:00",
+    "backgroundColor": "#036BC6",
+    "borderColor": "#036BC6",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000207",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "Academy Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "sessionType": "Rehab"
+    }
+  },
+  {
+    "id": "9000208",
+    "title": "KL",
+    "start": "2027-07-11T13:00:00",
+    "end": "2027-07-11T14:00:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000208",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "1st team",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000209",
+    "title": "KL - With Attach",
+    "start": "2027-07-19T16:00:00",
+    "end": "2027-07-19T17:00:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000209",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "1st team",
+      "location": "Neutral",
+      "coach": "Kitman Labs"
+    }
+  },
+  {
+    "id": "9000210",
+    "title": "Tactical session",
+    "start": "2027-07-27T13:00:00",
+    "end": "2027-07-27T15:00:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000210",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "International Squad",
+      "location": "Main Facility",
+      "coach": "Kitman Labs",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000211",
+    "title": "Individual session",
+    "start": "2027-07-27T13:00:00",
+    "end": "2027-07-27T14:30:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000211",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "International Squad",
+      "location": "Home",
+      "coach": "Kitman Labs"
+    }
+  },
+  {
+    "id": "9000212",
+    "title": "KL",
+    "start": "2027-08-05T15:00:00",
+    "end": "2027-08-05T16:00:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000212",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "International Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000213",
+    "title": "Team training",
+    "start": "2027-08-05T16:00:00",
+    "end": "2027-08-05T17:00:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000213",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "Academy Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "sessionType": "Speed",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000214",
+    "title": "KL - With Attach",
+    "start": "2027-08-10T08:00:00",
+    "end": "2027-08-10T08:45:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000214",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "1st team",
+      "location": "Main Facility",
+      "coach": "Kitman Labs"
+    }
+  },
+  {
+    "id": "9000215",
+    "title": "vs Samoa - Kitman Series",
+    "start": "2027-08-16T14:00:00",
+    "end": "2027-08-16T16:00:00",
+    "backgroundColor": "#C0392B",
+    "borderColor": "#C0392B",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000215",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "1st team",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "Dublin",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000216",
+    "title": "Individual session",
+    "start": "2027-08-22T16:00:00",
+    "end": "2027-08-22T16:45:00",
+    "backgroundColor": "#036BC6",
+    "borderColor": "#036BC6",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000216",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "Academy Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "sessionType": "Catapult",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000217",
+    "title": "Individual session",
+    "start": "2027-08-29T11:00:00",
+    "end": "2027-08-29T13:00:00",
+    "backgroundColor": "#036BC6",
+    "borderColor": "#036BC6",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000217",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "International Squad",
+      "location": "Away",
+      "coach": "Kitman Labs",
+      "sessionType": "Workout",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000218",
+    "title": "vs Australia - Kitman Series",
+    "start": "2027-09-09T07:00:00",
+    "end": "2027-09-09T08:30:00",
+    "backgroundColor": "#C0392B",
+    "borderColor": "#C0392B",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000218",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "International Squad",
+      "location": "Neutral",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "Galway",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000219",
+    "title": "Squad session",
+    "start": "2027-09-09T15:00:00",
+    "end": "2027-09-09T17:00:00",
+    "backgroundColor": "#01205D",
+    "borderColor": "#01205D",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000219",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "International Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "sessionType": "Rehab"
+    }
+  },
+  {
+    "id": "9000220",
+    "title": "KL",
+    "start": "2027-09-15T09:00:00",
+    "end": "2027-09-15T10:00:00",
+    "backgroundColor": "#29AE61",
+    "borderColor": "#29AE61",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000220",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "Academy Squad",
+      "location": "Away",
+      "coach": "Kitman Labs",
+      "sessionType": "Omegawave"
+    }
+  },
+  {
+    "id": "9000221",
+    "title": "Repeated event",
+    "start": "2027-09-12T15:00:00",
+    "end": "2027-09-12T16:30:00",
+    "backgroundColor": "#E62020",
+    "borderColor": "#E62020",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000221",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "International Squad",
+      "location": "Main Facility",
+      "coach": "Kitman Labs",
+      "sessionType": "Player Maker"
+    }
+  },
+  {
+    "id": "9000222",
+    "title": "Recovery session",
+    "start": "2027-09-23T13:00:00",
+    "end": "2027-09-23T14:00:00",
+    "backgroundColor": "#01205D",
+    "borderColor": "#01205D",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000222",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "International Squad",
+      "location": "Training Field",
+      "coach": "Kitman Labs",
+      "sessionType": "Catapult",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000223",
+    "title": "Tactical session",
+    "start": "2027-09-28T08:00:00",
+    "end": "2027-09-28T08:45:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000223",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "1st team",
+      "location": "Neutral",
+      "coach": "Kitman Labs"
+    }
+  },
+  {
+    "id": "9000224",
+    "title": "Squad session",
+    "start": "2027-10-06T07:00:00",
+    "end": "2027-10-06T08:30:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000224",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "1st team",
+      "location": "Main Facility",
+      "coach": "Kitman Labs"
+    }
+  },
+  {
+    "id": "9000225",
+    "title": "KL",
+    "start": "2027-10-13T16:00:00",
+    "end": "2027-10-13T18:00:00",
+    "backgroundColor": "#01205D",
+    "borderColor": "#01205D",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000225",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "Academy Squad",
+      "location": "Testing Facility",
+      "coach": "Kitman Labs",
+      "sessionType": "Speed",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000226",
+    "title": "Squad session",
+    "start": "2027-10-18T11:00:00",
+    "end": "2027-10-18T12:00:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000226",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "International Squad",
+      "location": "Neutral",
+      "coach": "Kitman Labs",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000227",
+    "title": "Friendly match",
+    "start": "2027-10-18T11:00:00",
+    "end": "2027-10-18T12:30:00",
+    "backgroundColor": "#29AE61",
+    "borderColor": "#29AE61",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000227",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "Academy Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "sessionType": "Speed",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000228",
+    "title": "Recovery session",
+    "start": "2027-10-28T16:00:00",
+    "end": "2027-10-28T18:00:00",
+    "backgroundColor": "#036BC6",
+    "borderColor": "#036BC6",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000228",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "International Squad",
+      "location": "Testing Facility",
+      "coach": "Kitman Labs",
+      "sessionType": "Rehab"
+    }
+  },
+  {
+    "id": "9000229",
+    "title": "Friendly match",
+    "start": "2027-11-02T14:00:00",
+    "end": "2027-11-02T14:45:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000229",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "International Squad",
+      "location": "Main Facility",
+      "coach": "Kitman Labs"
+    }
+  },
+  {
+    "id": "9000230",
+    "title": "Team training",
+    "start": "2027-11-03T09:00:00",
+    "end": "2027-11-03T09:45:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000230",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "1st team",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000231",
+    "title": "Tactical session",
+    "start": "2027-11-08T10:00:00",
+    "end": "2027-11-08T11:00:00",
+    "backgroundColor": "#036BC6",
+    "borderColor": "#036BC6",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000231",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "International Squad",
+      "location": "Training Field",
+      "coach": "Kitman Labs",
+      "sessionType": "Catapult"
+    }
+  },
+  {
+    "id": "9000232",
+    "title": "Strength & conditioning",
+    "start": "2027-11-14T14:00:00",
+    "end": "2027-11-14T16:00:00",
+    "backgroundColor": "#01205D",
+    "borderColor": "#01205D",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000232",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "International Squad",
+      "location": "Testing Facility",
+      "coach": "Kitman Labs",
+      "sessionType": "Rehab",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000233",
+    "title": "Match prep",
+    "start": "2027-11-23T12:00:00",
+    "end": "2027-11-23T12:45:00",
+    "backgroundColor": "#036BC6",
+    "borderColor": "#036BC6",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000233",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "Academy Squad",
+      "location": "Home",
+      "coach": "Kitman Labs",
+      "sessionType": "Agility",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000234",
+    "title": "Repeated event",
+    "start": "2027-12-02T14:00:00",
+    "end": "2027-12-02T15:30:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000234",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "International Squad",
+      "location": "Main Facility",
+      "coach": "Kitman Labs"
+    }
+  },
+  {
+    "id": "9000235",
+    "title": "vs Cork - Kitman Series",
+    "start": "2027-12-08T16:00:00",
+    "end": "2027-12-08T18:00:00",
+    "backgroundColor": "#C0392B",
+    "borderColor": "#C0392B",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000235",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "International Squad",
+      "location": "Neutral",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "Galway",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000236",
+    "title": "Tactical session",
+    "start": "2027-12-07T17:00:00",
+    "end": "2027-12-07T19:00:00",
+    "backgroundColor": "#29AE61",
+    "borderColor": "#29AE61",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000236",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "1st team",
+      "location": "Training Field",
+      "coach": "Kitman Labs",
+      "sessionType": "Club Training",
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000237",
+    "title": "Friendly match",
+    "start": "2027-12-15T15:00:00",
+    "end": "2027-12-15T17:00:00",
+    "backgroundColor": "#036BC6",
+    "borderColor": "#036BC6",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000237",
+    "extendedProps": {
+      "eventType": "TRAINING_SESSION",
+      "typeCategory": "Squad Sessions",
+      "squad": "Academy Squad",
+      "location": "Main Facility",
+      "coach": "Kitman Labs",
+      "sessionType": "Speed",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000238",
+    "title": "Tactical session",
+    "start": "2027-12-14T16:00:00",
+    "end": "2027-12-14T16:45:00",
+    "backgroundColor": "#036BC6",
+    "borderColor": "#036BC6",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000238",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "Academy Squad",
+      "location": "Testing Facility",
+      "coach": "Kitman Labs",
+      "sessionType": "Rehab",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000239",
+    "title": "vs Cork - Kitman Series",
+    "start": "2027-12-21T10:00:00",
+    "end": "2027-12-21T12:00:00",
+    "backgroundColor": "#C0392B",
+    "borderColor": "#C0392B",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000239",
+    "extendedProps": {
+      "eventType": "SERIES_EVENT",
+      "typeCategory": "Games",
+      "squad": "1st team",
+      "location": "Away",
+      "coach": "Kitman Labs",
+      "competition": "Kitman Series",
+      "opposition": "New Zealand",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "9000240",
+    "title": "Recovery session",
+    "start": "2027-12-21T13:00:00",
+    "end": "2027-12-21T14:00:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000240",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "1st team",
+      "location": "Main Facility",
+      "coach": "Kitman Labs"
+    }
+  },
+  {
+    "id": "9000241",
+    "title": "Match prep",
+    "start": "2027-12-29T08:00:00",
+    "end": "2027-12-29T08:45:00",
+    "backgroundColor": "#482831",
+    "borderColor": "#482831",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000241",
+    "extendedProps": {
+      "eventType": "RECURRING_EVENT",
+      "typeCategory": "Events",
+      "squad": "International Squad",
+      "location": "Neutral",
+      "coach": "Kitman Labs",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "9000242",
+    "title": "KL",
+    "start": "2027-12-27T12:00:00",
+    "end": "2027-12-27T13:30:00",
+    "backgroundColor": "#01205D",
+    "borderColor": "#01205D",
+    "textColor": "#ffffff",
+    "url": "/planning_hub/events/9000242",
+    "extendedProps": {
+      "eventType": "TEST_SESSION",
+      "typeCategory": "Individual Sessions",
+      "squad": "International Squad",
+      "location": "Training Field",
+      "coach": "Kitman Labs",
+      "sessionType": "Rehab",
+      "attendeeIds": [
+        1,
+        2,
+        3
+      ],
+      "staffIds": [
+        1,
+        2
+      ]
     }
   }
 ]
